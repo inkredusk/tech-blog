@@ -1,2 +1,2 @@
-# Threads Of Life
+# Description
 tech website and blog 
