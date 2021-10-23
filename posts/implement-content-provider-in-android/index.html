@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Implement Content Provider in Android - Threads Of Life</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Implement Content Provider in Android" />
+<meta property="og:description" content="Hey everyone!
+As developers, we often need to create applications that can share data with other applications residing on the Android device. A content provider is similar to a database where one can query it, edit its content, as well as add or delete content using insert, update, delete, and query methods. As mentioned on the developer&#39;s page, Content providers manage access to a structured set of data. They encapsulate the data, and provide mechanisms for defining data security." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karanbalkar.com/posts/implement-content-provider-in-android/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-05-20T08:47:31+05:30" />
+<meta property="article:modified_time" content="2017-05-20T08:47:31+05:30" />
+
+
+		<meta itemprop="name" content="Implement Content Provider in Android">
+<meta itemprop="description" content="Hey everyone!
+As developers, we often need to create applications that can share data with other applications residing on the Android device. A content provider is similar to a database where one can query it, edit its content, as well as add or delete content using insert, update, delete, and query methods. As mentioned on the developer&#39;s page, Content providers manage access to a structured set of data. They encapsulate the data, and provide mechanisms for defining data security."><meta itemprop="datePublished" content="2017-05-20T08:47:31+05:30" />
+<meta itemprop="dateModified" content="2017-05-20T08:47:31+05:30" />
+<meta itemprop="wordCount" content="1036">
+<meta itemprop="keywords" content="development,content provider,android," />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Threads Of Life" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Threads Of Life</div>
+					<div class="logo__tagline">Start..Pause...Run...but never STOP!</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/speaker-profile/">
+				
+				<span class="menu__text">Speaker Profile</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Implement Content Provider in Android</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Karan Balkar</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-05-20T08:47:31&#43;05:30">Saturday, May 20, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tech/" rel="category">Tech</a>, <a class="meta__link" href="/categories/android/" rel="category">Android</a>, <a class="meta__link" href="/categories/tips-and-tricks/" rel="category">Tips and tricks</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>Hey everyone!</p>
+<p align="justify">As developers, we often need to create applications that can share data with other applications residing on the Android device. A <strong>content provider</strong> is similar to a database where one can query it, edit its content, as well as add or delete content using <em>insert</em>, <em>update</em>, <em>delete</em>, and <em>query</em> methods. </p>
+<p align="justify">As mentioned on the developer's page, Content providers manage access to a structured set of data. They encapsulate the data, and provide mechanisms for defining data security. In this tutorial, we will learn how to implement a Content provider in Android.</p>
+<p align="justify"><strong>Pre-requisites</strong>: Eclipse IDE, Android SDK </p>
+<p align="justify"><strong>Step 1</strong>: Create Android project </p>
+<p align="justify">Launch Eclipse IDE and create a new Android application project called <strong>AndroidContentProviderExample</strong> with package name <strong>com.app.myprovider</strong> and choose the target SDK as <strong>Android 4.4</strong></p>
+<p align="justify"><strong>Step 2</strong>: Create ContentProvider class </p>
+<p align="justify">Let's write our own ContentProvider that will enable users to add a particular name in the <strong>Student</strong> table of the <strong>College</strong> database. Create a new class called <strong>MyProvider</strong> and write the following code! </p>
+<p><strong>MyProvider.java</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.app.myprovider<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.util.HashMap<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> android.content.ContentProvider<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.content.ContentUris<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.content.ContentValues<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.content.Context<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.content.UriMatcher<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.database.Cursor<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.database.SQLException<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.database.sqlite.SQLiteDatabase<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.database.sqlite.SQLiteOpenHelper<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.database.sqlite.SQLiteQueryBuilder<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.net.Uri<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.text.TextUtils<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.util.Log<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyProvider</span> <span style="color:#66d9ef">extends</span> ContentProvider <span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String PROVIDER_NAME <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;com.app.provider.Names&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;content://&#34;</span> <span style="color:#f92672">+</span> PROVIDER_NAME <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;/names&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> Uri CONTENT_URI <span style="color:#f92672">=</span> Uri<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">);</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String NAME <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String ID <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> HashMap<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> namesMap<span style="color:#f92672">;</span>
+
+	<span style="color:#75715e">//database variables
+</span><span style="color:#75715e"></span>	DBHelper dbHelper<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">private</span> SQLiteDatabase database<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String DATABASE_NAME <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;College&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String TABLE_NAME <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Student&#34;</span><span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> DATABASE_VERSION <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String CREATE_TABLE <span style="color:#f92672">=</span> 
+			<span style="color:#e6db74">&#34; CREATE TABLE &#34;</span> <span style="color:#f92672">+</span> TABLE_NAME <span style="color:#f92672">+</span>
+			<span style="color:#e6db74">&#34; (id INTEGER PRIMARY KEY AUTOINCREMENT, &#34;</span> <span style="color:#f92672">+</span> 
+			<span style="color:#e6db74">&#34; name TEXT NOT NULL);&#34;</span><span style="color:#f92672">;</span>
+
+	<span style="color:#75715e">// integer values used in content URI
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> NAMES <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> NAMES_ID <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> UriMatcher uriMatcher<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">static</span><span style="color:#f92672">{</span>
+		uriMatcher <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> UriMatcher<span style="color:#f92672">(</span>UriMatcher<span style="color:#f92672">.</span><span style="color:#a6e22e">NO_MATCH</span><span style="color:#f92672">);</span>
+		uriMatcher<span style="color:#f92672">.</span><span style="color:#a6e22e">addURI</span><span style="color:#f92672">(</span>PROVIDER_NAME<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;names&#34;</span><span style="color:#f92672">,</span> NAMES<span style="color:#f92672">);</span>
+		uriMatcher<span style="color:#f92672">.</span><span style="color:#a6e22e">addURI</span><span style="color:#f92672">(</span>PROVIDER_NAME<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;names/#&#34;</span><span style="color:#f92672">,</span> NAMES_ID<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">onCreate</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// TODO Auto-generated method stub
+</span><span style="color:#75715e"></span>		Context context <span style="color:#f92672">=</span> getContext<span style="color:#f92672">();</span>
+		dbHelper <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DBHelper<span style="color:#f92672">(</span>context<span style="color:#f92672">);</span>
+		<span style="color:#75715e">// permissions to be writable
+</span><span style="color:#75715e"></span>		database <span style="color:#f92672">=</span> dbHelper<span style="color:#f92672">.</span><span style="color:#a6e22e">getWritableDatabase</span><span style="color:#f92672">();</span>
+
+		<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>database <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span>
+			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">else</span>
+			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>	
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> Cursor <span style="color:#a6e22e">query</span><span style="color:#f92672">(</span>Uri uri<span style="color:#f92672">,</span> String<span style="color:#f92672">[]</span> projection<span style="color:#f92672">,</span> String selection<span style="color:#f92672">,</span>
+			String<span style="color:#f92672">[]</span> selectionArgs<span style="color:#f92672">,</span> String sortOrder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// TODO Auto-generated method stub
+</span><span style="color:#75715e"></span>		SQLiteQueryBuilder queryBuilder <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SQLiteQueryBuilder<span style="color:#f92672">();</span>
+		queryBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">setTables</span><span style="color:#f92672">(</span>TABLE_NAME<span style="color:#f92672">);</span>
+
+		<span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>uriMatcher<span style="color:#f92672">.</span><span style="color:#a6e22e">match</span><span style="color:#f92672">(</span>uri<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// maps all database column names
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">case</span> NAMES<span style="color:#f92672">:</span>
+			queryBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">setProjectionMap</span><span style="color:#f92672">(</span>namesMap<span style="color:#f92672">);</span>
+			<span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">case</span> NAMES_ID<span style="color:#f92672">:</span>
+			queryBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">appendWhere</span><span style="color:#f92672">(</span> ID <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#f92672">+</span> uri<span style="color:#f92672">.</span><span style="color:#a6e22e">getLastPathSegment</span><span style="color:#f92672">());</span>
+			<span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unknown URI &#34;</span> <span style="color:#f92672">+</span> uri<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>sortOrder <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> sortOrder <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">){</span>
+			sortOrder <span style="color:#f92672">=</span> NAME<span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
+		Cursor cursor <span style="color:#f92672">=</span> queryBuilder<span style="color:#f92672">.</span><span style="color:#a6e22e">query</span><span style="color:#f92672">(</span>database<span style="color:#f92672">,</span> projection<span style="color:#f92672">,</span> selection<span style="color:#f92672">,</span> 
+				selectionArgs<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> sortOrder<span style="color:#f92672">);</span>
+		cursor<span style="color:#f92672">.</span><span style="color:#a6e22e">setNotificationUri</span><span style="color:#f92672">(</span>getContext<span style="color:#f92672">().</span><span style="color:#a6e22e">getContentResolver</span><span style="color:#f92672">(),</span> uri<span style="color:#f92672">);</span>
+
+		<span style="color:#66d9ef">return</span> cursor<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getType</span><span style="color:#f92672">(</span>Uri uri<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// TODO Auto-generated method stub
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> Uri <span style="color:#a6e22e">insert</span><span style="color:#f92672">(</span>Uri uri<span style="color:#f92672">,</span> ContentValues values<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// TODO Auto-generated method stub
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">long</span> row <span style="color:#f92672">=</span> database<span style="color:#f92672">.</span><span style="color:#a6e22e">insert</span><span style="color:#f92672">(</span>TABLE_NAME<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">,</span> values<span style="color:#f92672">);</span>
+		<span style="color:#75715e">// If record is added successfully
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>row <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			Uri newUri <span style="color:#f92672">=</span> ContentUris<span style="color:#f92672">.</span><span style="color:#a6e22e">withAppendedId</span><span style="color:#f92672">(</span>CONTENT_URI<span style="color:#f92672">,</span> row<span style="color:#f92672">);</span>
+			getContext<span style="color:#f92672">().</span><span style="color:#a6e22e">getContentResolver</span><span style="color:#f92672">().</span><span style="color:#a6e22e">notifyChange</span><span style="color:#f92672">(</span>newUri<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+			<span style="color:#66d9ef">return</span> newUri<span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
+		<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> SQLException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Fail to add a new record into &#34;</span> <span style="color:#f92672">+</span> uri<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span>Uri uri<span style="color:#f92672">,</span> String selection<span style="color:#f92672">,</span> String<span style="color:#f92672">[]</span> selectionArgs<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// TODO Auto-generated method stub
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+		<span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>uriMatcher<span style="color:#f92672">.</span><span style="color:#a6e22e">match</span><span style="color:#f92672">(</span>uri<span style="color:#f92672">)){</span>
+		<span style="color:#66d9ef">case</span> NAMES<span style="color:#f92672">:</span>
+			<span style="color:#75715e">// delete all the records of the table
+</span><span style="color:#75715e"></span>			count <span style="color:#f92672">=</span> database<span style="color:#f92672">.</span><span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span>TABLE_NAME<span style="color:#f92672">,</span> selection<span style="color:#f92672">,</span> selectionArgs<span style="color:#f92672">);</span>
+			<span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">case</span> NAMES_ID<span style="color:#f92672">:</span>
+			<span style="color:#75715e">//gets the id
+</span><span style="color:#75715e"></span>			String id <span style="color:#f92672">=</span> uri<span style="color:#f92672">.</span><span style="color:#a6e22e">getLastPathSegment</span><span style="color:#f92672">();</span>		
+			count <span style="color:#f92672">=</span> database<span style="color:#f92672">.</span><span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span> TABLE_NAME<span style="color:#f92672">,</span> ID <span style="color:#f92672">+</span>  <span style="color:#e6db74">&#34; = &#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span> 
+					<span style="color:#f92672">(!</span>TextUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span>selection<span style="color:#f92672">)</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34; AND (&#34;</span> <span style="color:#f92672">+</span> 
+							selection <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;)&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">),</span> selectionArgs<span style="color:#f92672">);</span>
+			<span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> 
+			<span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> IllegalArgumentException<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Unsupported URI &#34;</span> <span style="color:#f92672">+</span> uri<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+
+		getContext<span style="color:#f92672">().</span><span style="color:#a6e22e">getContentResolver</span><span style="color:#f92672">().</span><span style="color:#a6e22e">notifyChange</span><span style="color:#f92672">(</span>uri<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">return</span> count<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">update</span><span style="color:#f92672">(</span>Uri uri<span style="color:#f92672">,</span> ContentValues values<span style="color:#f92672">,</span> String selection<span style="color:#f92672">,</span>
+			String<span style="color:#f92672">[]</span> selectionArgs<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// TODO Auto-generated method stub
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DBHelper</span> <span style="color:#66d9ef">extends</span> SQLiteOpenHelper <span style="color:#f92672">{</span>
+
+		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">DBHelper</span><span style="color:#f92672">(</span>Context context<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>context<span style="color:#f92672">,</span> DATABASE_NAME<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> DATABASE_VERSION<span style="color:#f92672">);</span>
+			<span style="color:#75715e">// TODO Auto-generated constructor stub
+</span><span style="color:#75715e"></span>		<span style="color:#f92672">}</span>
+
+		<span style="color:#a6e22e">@Override</span>
+		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>SQLiteDatabase db<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#75715e">// TODO Auto-generated method stub
+</span><span style="color:#75715e"></span>			db<span style="color:#f92672">.</span><span style="color:#a6e22e">execSQL</span><span style="color:#f92672">(</span>CREATE_TABLE<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+
+		<span style="color:#a6e22e">@Override</span>
+		<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onUpgrade</span><span style="color:#f92672">(</span>SQLiteDatabase db<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> oldVersion<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> newVersion<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#75715e">// TODO Auto-generated method stub
+</span><span style="color:#75715e"></span>			Log<span style="color:#f92672">.</span><span style="color:#a6e22e">w</span><span style="color:#f92672">(</span>DBHelper<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">(),</span>
+					<span style="color:#e6db74">&#34;Upgrading database&#34;</span><span style="color:#f92672">);</span>
+			db<span style="color:#f92672">.</span><span style="color:#a6e22e">execSQL</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;DROP TABLE IF EXISTS &#34;</span> <span style="color:#f92672">+</span>  TABLE_NAME<span style="color:#f92672">);</span>
+			onCreate<span style="color:#f92672">(</span>db<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+
+	<span style="color:#f92672">}</span>
+
+
+<span style="color:#f92672">}</span>
+</code></pre></div><p align="justify"><strong>Step 3</strong>: Create Activity class </p>
+<p align="justify">Next, let's create our Activity class called <strong>MainActivity</strong> that will allow user to add, delete or show the respective values. </p>
+<p><strong>MainActivity.java</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.app.myprovider<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> android.app.Activity<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.content.ContentValues<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.database.Cursor<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.net.Uri<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.os.Bundle<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.view.View<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.widget.EditText<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.widget.Toast<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MainActivity</span> <span style="color:#66d9ef">extends</span> Activity <span style="color:#f92672">{</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>Bundle savedInstanceState<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>savedInstanceState<span style="color:#f92672">);</span>
+		setContentView<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">activity_main</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">//delete all the records and the table of the database provider
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteAllNames</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		String URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;content://com.app.provider.Names/names&#34;</span><span style="color:#f92672">;</span>
+		Uri friends <span style="color:#f92672">=</span> Uri<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> getContentResolver<span style="color:#f92672">().</span><span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span>
+				friends<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+		String countNum <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;App: &#34;</span><span style="color:#f92672">+</span> count <span style="color:#f92672">+</span><span style="color:#e6db74">&#34; records are deleted.&#34;</span><span style="color:#f92672">;</span>
+		Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">makeText</span><span style="color:#f92672">(</span>getBaseContext<span style="color:#f92672">(),</span> 
+				countNum<span style="color:#f92672">,</span> Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">LENGTH_LONG</span><span style="color:#f92672">).</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+
+	<span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">//add a new name
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addName</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		ContentValues values <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ContentValues<span style="color:#f92672">();</span>
+
+		values<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>MyProvider<span style="color:#f92672">.</span><span style="color:#a6e22e">NAME</span><span style="color:#f92672">,</span> 
+				<span style="color:#f92672">((</span>EditText<span style="color:#f92672">)</span>findViewById<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">)).</span><span style="color:#a6e22e">getText</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+
+		Uri uri <span style="color:#f92672">=</span> getContentResolver<span style="color:#f92672">().</span><span style="color:#a6e22e">insert</span><span style="color:#f92672">(</span>
+				MyProvider<span style="color:#f92672">.</span><span style="color:#a6e22e">CONTENT_URI</span><span style="color:#f92672">,</span> values<span style="color:#f92672">);</span>
+
+		Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">makeText</span><span style="color:#f92672">(</span>getBaseContext<span style="color:#f92672">(),</span> 
+				<span style="color:#e6db74">&#34;App:&#34;</span> <span style="color:#f92672">+</span> uri<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; inserted!&#34;</span><span style="color:#f92672">,</span> Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">LENGTH_LONG</span><span style="color:#f92672">).</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">//display all names
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">showAllNames</span><span style="color:#f92672">(</span>View view<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		String URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;content://com.app.provider.Names/names&#34;</span><span style="color:#f92672">;</span>
+		Uri friends <span style="color:#f92672">=</span> Uri<span style="color:#f92672">.</span><span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">);</span>
+		Cursor c <span style="color:#f92672">=</span> getContentResolver<span style="color:#f92672">().</span><span style="color:#a6e22e">query</span><span style="color:#f92672">(</span>friends<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">);</span>
+		String result <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;App Results:&#34;</span><span style="color:#f92672">;</span>
+
+		<span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>c<span style="color:#f92672">.</span><span style="color:#a6e22e">moveToFirst</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+			Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">makeText</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> result<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; no content yet!&#34;</span><span style="color:#f92672">,</span> Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">LENGTH_LONG</span><span style="color:#f92672">).</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+		<span style="color:#f92672">}</span><span style="color:#66d9ef">else</span><span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">do</span><span style="color:#f92672">{</span>
+				result <span style="color:#f92672">=</span> result <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span> <span style="color:#f92672">+</span> c<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span>c<span style="color:#f92672">.</span><span style="color:#a6e22e">getColumnIndex</span><span style="color:#f92672">(</span>MyProvider<span style="color:#f92672">.</span><span style="color:#a6e22e">NAME</span><span style="color:#f92672">));</span> 
+			<span style="color:#f92672">}</span> <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>c<span style="color:#f92672">.</span><span style="color:#a6e22e">moveToNext</span><span style="color:#f92672">());</span>
+			Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">makeText</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> result<span style="color:#f92672">,</span> Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">LENGTH_LONG</span><span style="color:#f92672">).</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+		<span style="color:#f92672">}</span>
+
+	<span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>activity_main.xml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;RelativeLayout</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span style="color:#a6e22e">xmlns:tools=</span><span style="color:#e6db74">&#34;http://schemas.android.com/tools&#34;</span>
+    <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+    <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+    <span style="color:#a6e22e">tools:context=</span><span style="color:#e6db74">&#34;${relativePackage}.${activityClass}&#34;</span> <span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;EditText</span>
+        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/name&#34;</span>
+        <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;fill_parent&#34;</span>
+        <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        <span style="color:#a6e22e">android:ems=</span><span style="color:#e6db74">&#34;10&#34;</span>
+        <span style="color:#a6e22e">android:hint=</span><span style="color:#e6db74">&#34;@string/name&#34;</span> <span style="color:#f92672">/&gt;</span>
+
+    <span style="color:#f92672">&lt;Button</span>
+        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/btnAdd&#34;</span>
+        <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;fill_parent&#34;</span>
+        <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        <span style="color:#a6e22e">android:layout_below=</span><span style="color:#e6db74">&#34;@+id/name&#34;</span>
+        <span style="color:#a6e22e">android:layout_marginTop=</span><span style="color:#e6db74">&#34;30dp&#34;</span>
+        <span style="color:#a6e22e">android:onClick=</span><span style="color:#e6db74">&#34;addName&#34;</span>
+        <span style="color:#a6e22e">android:text=</span><span style="color:#e6db74">&#34;@string/add&#34;</span> <span style="color:#f92672">/&gt;</span>
+
+    <span style="color:#f92672">&lt;Button</span>
+        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/btnShow&#34;</span>
+        <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;fill_parent&#34;</span>
+        <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        <span style="color:#a6e22e">android:layout_alignLeft=</span><span style="color:#e6db74">&#34;@+id/btnAdd&#34;</span>
+        <span style="color:#a6e22e">android:layout_below=</span><span style="color:#e6db74">&#34;@+id/btnAdd&#34;</span>
+        <span style="color:#a6e22e">android:layout_marginTop=</span><span style="color:#e6db74">&#34;20dp&#34;</span>
+        <span style="color:#a6e22e">android:onClick=</span><span style="color:#e6db74">&#34;showAllNames&#34;</span>
+        <span style="color:#a6e22e">android:text=</span><span style="color:#e6db74">&#34;@string/show&#34;</span> <span style="color:#f92672">/&gt;</span>
+
+    <span style="color:#f92672">&lt;Button</span>
+        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/btnDelete&#34;</span>
+        <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;fill_parent&#34;</span>
+        <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        <span style="color:#a6e22e">android:layout_alignLeft=</span><span style="color:#e6db74">&#34;@+id/btnShow&#34;</span>
+        <span style="color:#a6e22e">android:layout_below=</span><span style="color:#e6db74">&#34;@+id/btnShow&#34;</span>
+        <span style="color:#a6e22e">android:layout_marginTop=</span><span style="color:#e6db74">&#34;20dp&#34;</span>
+        <span style="color:#a6e22e">android:onClick=</span><span style="color:#e6db74">&#34;deleteAllNames&#34;</span>
+        <span style="color:#a6e22e">android:text=</span><span style="color:#e6db74">&#34;@string/delete&#34;</span> <span style="color:#f92672">/&gt;</span>
+
+<span style="color:#f92672">&lt;/RelativeLayout&gt;</span>
+</code></pre></div><p><strong>strings.xml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#f92672">&lt;string</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">&gt;</span>Name<span style="color:#f92672">&lt;/string&gt;</span>
+    <span style="color:#f92672">&lt;string</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;add&#34;</span><span style="color:#f92672">&gt;</span>Add a new name<span style="color:#f92672">&lt;/string&gt;</span>
+    <span style="color:#f92672">&lt;string</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;show&#34;</span><span style="color:#f92672">&gt;</span>Show all names<span style="color:#f92672">&lt;/string&gt;</span>
+    <span style="color:#f92672">&lt;string</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;delete&#34;</span><span style="color:#f92672">&gt;</span>Delete all names<span style="color:#f92672">&lt;/string&gt;</span>
+</code></pre></div><p align="justify"><strong>Step 4</strong>: Register Provider in Manifest file </p>
+<p align="justify">Further, for Android to use our provider it is important to register the same in the <strong>AndroidManifest.xml</strong> as follows! </p>
+<p><strong>AndroidManifest.xml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;manifest</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span style="color:#a6e22e">package=</span><span style="color:#e6db74">&#34;com.app.myprovider&#34;</span>
+    <span style="color:#a6e22e">android:versionCode=</span><span style="color:#e6db74">&#34;1&#34;</span>
+    <span style="color:#a6e22e">android:versionName=</span><span style="color:#e6db74">&#34;1.0&#34;</span> <span style="color:#f92672">&gt;</span>
+
+    <span style="color:#f92672">&lt;uses-sdk</span>
+        <span style="color:#a6e22e">android:minSdkVersion=</span><span style="color:#e6db74">&#34;8&#34;</span>
+        <span style="color:#a6e22e">android:targetSdkVersion=</span><span style="color:#e6db74">&#34;19&#34;</span> <span style="color:#f92672">/&gt;</span>
+
+    <span style="color:#f92672">&lt;application</span>
+        <span style="color:#a6e22e">android:allowBackup=</span><span style="color:#e6db74">&#34;true&#34;</span>
+        <span style="color:#a6e22e">android:icon=</span><span style="color:#e6db74">&#34;@drawable/ic_launcher&#34;</span>
+        <span style="color:#a6e22e">android:label=</span><span style="color:#e6db74">&#34;@string/app_name&#34;</span>
+        <span style="color:#a6e22e">android:theme=</span><span style="color:#e6db74">&#34;@style/AppTheme&#34;</span> <span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;activity</span>
+            <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;.MainActivity&#34;</span>
+            <span style="color:#a6e22e">android:label=</span><span style="color:#e6db74">&#34;@string/app_name&#34;</span> <span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;intent-filter&gt;</span>
+                <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.MAIN&#34;</span> <span style="color:#f92672">/&gt;</span>
+                <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.LAUNCHER&#34;</span> <span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;/intent-filter&gt;</span>
+        <span style="color:#f92672">&lt;/activity&gt;</span>
+        <span style="color:#f92672">&lt;provider</span>
+            <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;.MyProvider&#34;</span>
+            <span style="color:#a6e22e">android:authorities=</span><span style="color:#e6db74">&#34;com.app.provider.Names&#34;</span> <span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;/provider&gt;</span>
+
+    <span style="color:#f92672">&lt;/application&gt;</span>
+<span style="color:#f92672">&lt;/manifest&gt;</span>
+</code></pre></div><p align="justify">Finally, make sure no errors are present. Run the application on an Android device and you should be able to insert, delete and display the list of names as follows! 😄 </p>
+<p><img src="/custom/images/android_content_provider_output_1.png" alt="android_content_provider_output_1"></p>
+<p><img src="/custom/images/android_content_provider_output_2.png" alt="android_content_provider_output_2"></p>
+<p><img src="/custom/images/android_content_provider_output_3.png" alt="android_content_provider_output_3"></p>
+<p><img src="/custom/images/android_content_provider_output_4.png" alt="android_content_provider_output_4"></p>
+<p align="justify"><strong>Reference</strong>: <a href="http://developer.android.com/guide/topics/providers/content-providers.html" target="_blank">Android Content Providers</a> </p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/development/" rel="tag">development</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/content-provider/" rel="tag">content provider</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/android/" rel="tag">android</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Karan Balkar avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Karan Balkar</span>
+	</div>
+	<div class="authorbox__description">
+		Karan Balkar is a mobile application developer primarily working on Android since the past 5 years. He has also worked on Augmented reality / Virtual reality based mobile applications and is passionate about exploring new innovative technologies.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/learning-kivy-clipboard-and-textinput/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Learning Kivy: Clipboard and Text Input</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/using-jsoup-on-android/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Using Jsoup on Android</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "threadsoflifeblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Threads Of Life
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

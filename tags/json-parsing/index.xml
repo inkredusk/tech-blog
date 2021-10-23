@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>json parsing on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/json-parsing/</link>
+    <description>Recent content in json parsing on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Oct 2021 10:49:10 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/json-parsing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Parsing JSON using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/parsing-json-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 10:49:10 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/parsing-json-using-qt5/</guid>
+      <description>Hello friends!
+In one of my previous posts, we had seen how to send a HTTP request using Qt. The response we got then was a JSON string. JSON is a subset of the object literal notation of JavaScript. It is basically a lightweight data-interchange format making it easy for humans to read and write. A JSON is build on two structures namely,
+ A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list or associative array.</description>
+    </item>
+    
+  </channel>
+</rss>

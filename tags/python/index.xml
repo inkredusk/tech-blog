@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/python/</link>
+    <description>Recent content in python on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Nov 2015 08:26:00 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Kivy: Clipboard and Text Input</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-clipboard-and-textinput/</link>
+      <pubDate>Thu, 19 Nov 2015 08:26:00 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-clipboard-and-textinput/</guid>
+      <description>Hey everyone!
+It&#39;s time for another cool Kivy tutorial. In this one I will explain how to use the Clipboard core module to copy text from a Text Input widget. The text thus copied will be applied to a Button, displayed in our layout.
+Kivy provides a core class for accessing the Clipboard. It is used mainly to copy some data so that it can be used somewhere else. On the other hand, the Text Input widget provides a box of editable plain text.</description>
+    </item>
+    
+    <item>
+      <title>Learning Kivy : TabbedPanel</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-tabbedpanel/</link>
+      <pubDate>Sun, 18 Oct 2015 15:40:54 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-tabbedpanel/</guid>
+      <description>Hello everyone!
+Today&#39;s Kivy tutorial talks about one of the existing complex UX widgets called TabbedPanel. The TabbedPanel widget manages different widgets in tabs. It consists of a header area for the actual tab buttons and a content area for showing the current tab content. Before you begin implementing this widget you need to understand the concept of a TabbedPanelHeader.
+What is a TabbedPanelHeader? An individual tab is called a TabbedPanelHeader.</description>
+    </item>
+    
+    <item>
+      <title>Learning Kivy : Canvas</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-canvas/</link>
+      <pubDate>Sun, 18 Oct 2015 15:17:23 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-canvas/</guid>
+      <description>Hey everyone!
+In my previous Kivy tutorial I talked about the Carousel widget and the AsyncImage class that one can use to display and load images respectively. Today I would be talking about the Graphics module of the Kivy framework! 1. Graphics  (kivy.graphics) From the Kivy documentation, the Graphics package assembles all low level functions to draw an object.The entire package is compatible with OpenGL ES 2.0 and has a lot of rendering optimizations.</description>
+    </item>
+    
+    <item>
+      <title>Learning Kivy : Carousel and AsyncImage</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-carousel-and-asyncimage/</link>
+      <pubDate>Sat, 17 Oct 2015 15:24:10 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-carousel-and-asyncimage/</guid>
+      <description>Hello everyone!
+Today I will talk about two interesting Widgets of the Kivy framework. Both these widgets can be used to display/load images in a particular manner.
+1. Carousel
+As mentioned in the Kivy docs, the Carousel widget provides a mobile-friendly carousel view where one can swipe between slides. One can add any content to the carousel and use it horizontally or vertically. The carousel can display pages in loop. One can also navigate to the next slide or the previous slide using the Carousel properties.</description>
+    </item>
+    
+    <item>
+      <title>Learning Kivy : Accordion</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-accordion/</link>
+      <pubDate>Mon, 20 Jul 2015 07:54:39 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-accordion/</guid>
+      <description>Hey everyone!
+Working on Kivy has been an amazing learning experience. Kivy has made user interface development a lot easier. Today, I will talk about Accordion, one of the interesting widgets that Kivy has to offer to developers out there.
+What is an Accordion ?
+Accordion is basically a Widget in the form of a menu where in the options are stacked either horizontally or vertically. An Accordion will contain one or many AccordionItem instances such that each item when touched opens up displaying it&#39;s underlying content.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started With Kivy</title>
+      <link>https://karanbalkar.com/posts/getting-started-with-kivy/</link>
+      <pubDate>Fri, 20 Feb 2015 09:00:49 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/getting-started-with-kivy/</guid>
+      <description>Kivy is a popular cross platform open source library for developing applications involving different user interfaces. Currently, Kivy runs on Linux, Windows, Mac OSX, Android and iOS.
+Let&amp;rsquo;s start by downloading Kivy for Windows  from here : Kivy for Windows. Unzip the downloaded file to find the kivy.bat file shown below:
+Copy the path to this folder. Now right click My Computer -&amp;gt; Properties -&amp;gt; Advanced System Settings -&amp;gt; Environment Variables Select Path  under System variables and click on Edit.</description>
+    </item>
+    
+  </channel>
+</rss>

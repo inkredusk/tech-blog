@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>getting started on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/getting-started/</link>
+    <description>Recent content in getting started on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Oct 2021 11:03:43 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started With Qt</title>
+      <link>https://karanbalkar.com/posts/getting-started-with-qt/</link>
+      <pubDate>Mon, 18 Oct 2021 11:03:43 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/getting-started-with-qt/</guid>
+      <description>Hi guys,
+Qt is a cross-platform application framework used extensively for developing non-GUI programs and consoles for servers. It is written in C++ and works on major platforms including Android, iOS, Windows and more recently Sailfish MeeGo Linux. There exists three versions of Qt available on each of these platforms, namely:
+GUI Framework – commercial entry level GUI edition, stripped of network and database support (formerly named &amp;ldquo;Desktop Light&amp;rdquo;)
+Full Framework – complete commercial edition Open Source – complete Open Source edition</description>
+    </item>
+    
+    <item>
+      <title>Processing for Android</title>
+      <link>https://karanbalkar.com/posts/processing-for-android/</link>
+      <pubDate>Sat, 18 Aug 2018 20:56:34 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/processing-for-android/</guid>
+      <description>Hello everyone!
+The Processing language has now become a popular development tool for Android applications. It&#39;s latest version 2.0+ allows developers to create an Android application from scratch using the newly added Android mode.
+Processing supports many libraries including video, network, PDF export etc. Just as Android, Processing is also open source and can be downloaded for free. Through this post, I will demonstrate how to create an Android application using Processing!</description>
+    </item>
+    
+    <item>
+      <title>Getting Started With Kivy</title>
+      <link>https://karanbalkar.com/posts/getting-started-with-kivy/</link>
+      <pubDate>Fri, 20 Feb 2015 09:00:49 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/getting-started-with-kivy/</guid>
+      <description>Kivy is a popular cross platform open source library for developing applications involving different user interfaces. Currently, Kivy runs on Linux, Windows, Mac OSX, Android and iOS.
+Let&amp;rsquo;s start by downloading Kivy for Windows  from here : Kivy for Windows. Unzip the downloaded file to find the kivy.bat file shown below:
+Copy the path to this folder. Now right click My Computer -&amp;gt; Properties -&amp;gt; Advanced System Settings -&amp;gt; Environment Variables Select Path  under System variables and click on Edit.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jQuery on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/jquery/</link>
+    <description>Recent content in jQuery on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Oct 2015 08:17:53 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implement Lightbox using jQuery plugin</title>
+      <link>https://karanbalkar.com/posts/implement-lightbox-using-jquery-plugin/</link>
+      <pubDate>Mon, 19 Oct 2015 08:17:53 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/implement-lightbox-using-jquery-plugin/</guid>
+      <description>Hi guys!
+Lightbox is a well-known JavaScript technique used to display images or any web content using modal dialogs. Not too long ago, the lightbox plugin was written in jQuery that allowed developers to modify the code and come up with new plugins that carry out the same task.
+Colorbox is one such jQuery plugin that we can use to implement a lightbox. Through this post, I will try to implement a sample HTML page that displays a lightbox using the Colorbox plugin.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>screen orientation on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/screen-orientation/</link>
+    <description>Recent content in screen orientation on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Oct 2018 17:28:21 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/screen-orientation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Handling Screen Orientation Android</title>
+      <link>https://karanbalkar.com/posts/handling-screen-orientation-android/</link>
+      <pubDate>Thu, 18 Oct 2018 17:28:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/handling-screen-orientation-android/</guid>
+      <description>It is observed that when device configurations including screen orientation, keyboard availability etc change, Android restarts the current Activity. This is done to enable the application to adapt to the new configuration.
+In order to declare an Activity that handles configuration changes we must add the android:configChanges attribute with a value that represents the configuration we want to handle, in our AndroidManifest.xml file. There are basically two ways to handle screen orientation in Android.</description>
+    </item>
+    
+  </channel>
+</rss>

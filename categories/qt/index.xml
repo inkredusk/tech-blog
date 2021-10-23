@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qt on Threads Of Life</title>
+    <link>https://karanbalkar.com/categories/qt/</link>
+    <description>Recent content in Qt on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Oct 2021 14:37:49 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/categories/qt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Base64 encoding and decoding using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/base64-encoding-decoding-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 14:37:49 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/base64-encoding-decoding-using-qt5/</guid>
+      <description>Hi everyone!
+In one of my previous posts, we had learnt how to configure and setup Qt for Windows. Base64 is basically a method using which we can encode binary data into a character set in order to transmit the data without any loss or modification of the contents. It is a group of similar binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation.</description>
+    </item>
+    
+    <item>
+      <title>Sending Http Request Using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/sending-http-request-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 11:20:05 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/sending-http-request-using-qt5/</guid>
+      <description>HTTP (Hypertext Transfer Protocol) works as a request-response protocol between a client and server. A web browser may be the client, and an application on a computer that hosts a web site may be the server. For example, a client (browser) submits an HTTP request to the server and then the server returns a response to the client. The response contains status information about the request as well as the requested content.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started With Qt</title>
+      <link>https://karanbalkar.com/posts/getting-started-with-qt/</link>
+      <pubDate>Mon, 18 Oct 2021 11:03:43 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/getting-started-with-qt/</guid>
+      <description>Hi guys,
+Qt is a cross-platform application framework used extensively for developing non-GUI programs and consoles for servers. It is written in C++ and works on major platforms including Android, iOS, Windows and more recently Sailfish MeeGo Linux. There exists three versions of Qt available on each of these platforms, namely:
+GUI Framework – commercial entry level GUI edition, stripped of network and database support (formerly named &amp;ldquo;Desktop Light&amp;rdquo;)
+Full Framework – complete commercial edition Open Source – complete Open Source edition</description>
+    </item>
+    
+    <item>
+      <title>Parsing JSON using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/parsing-json-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 10:49:10 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/parsing-json-using-qt5/</guid>
+      <description>Hello friends!
+In one of my previous posts, we had seen how to send a HTTP request using Qt. The response we got then was a JSON string. JSON is a subset of the object literal notation of JavaScript. It is basically a lightweight data-interchange format making it easy for humans to read and write. A JSON is build on two structures namely,
+ A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list or associative array.</description>
+    </item>
+    
+    <item>
+      <title>Zipping and unzipping files using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/zipping-unzipping-files-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 08:38:26 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/zipping-unzipping-files-using-qt5/</guid>
+      <description>Hey everyone!
+Qt provides a QByteArray class that can be used to store raw bytes and traditional 8-bit terminated strings. Moreover, Qt also provides the QString class to store string data. QString is mainly used throughout the Qt API.
+Through this post, we will learn how to zip and unzip files using Qt. We will create a sample text file containing a message as follows,
+demo.txt
+This is a demo to zip and unzip files using Qt framework Pre-requisites: Qt Creator, MinGW compiler for Windows (64 bit)</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>light and gyroscope on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/light-and-gyroscope/</link>
+    <description>Recent content in light and gyroscope on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 19 Oct 2021 07:53:34 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/light-and-gyroscope/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Detect and use light and gyroscope sensors in Android</title>
+      <link>https://karanbalkar.com/posts/detect-use-light-gyroscope-sensors-android/</link>
+      <pubDate>Tue, 19 Oct 2021 07:53:34 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/detect-use-light-gyroscope-sensors-android/</guid>
+      <description>Hello everyone!
+Sensors play a vital role in any electronic device and more importantly help in detecting or measuring a physical property. Nowadays, Android phones come equipped with a range of sensors including light, pressure, temperature, gyroscope, proximity etc. Developers need to build applications using the functionality of these sensors. For that purpose, one needs to learn how to detect and implement the corresponding sensor functionality. Through this post, we will understand how to detect and use the Light and Gyroscope sensors in Android.</description>
+    </item>
+    
+  </channel>
+</rss>

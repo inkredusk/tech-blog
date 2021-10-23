@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Using Jsoup on Android - Threads Of Life</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Using Jsoup on Android" />
+<meta property="og:description" content="Hello everyone!
+As Android developers, we often need to call web services in order to fetch data from a server. We also need to parse the data for displaying it on the user interface. There are various parsers available that enable developers to retrieve data efficiently from a web service. JSoup is one such open source library that provides an API for extracting and manipulating data. Basically, it is an HTML parser used for working with various HTML elements, attributes etc." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karanbalkar.com/posts/using-jsoup-on-android/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-09-12T14:05:01+05:30" />
+<meta property="article:modified_time" content="2017-09-12T14:05:01+05:30" />
+
+
+		<meta itemprop="name" content="Using Jsoup on Android">
+<meta itemprop="description" content="Hello everyone!
+As Android developers, we often need to call web services in order to fetch data from a server. We also need to parse the data for displaying it on the user interface. There are various parsers available that enable developers to retrieve data efficiently from a web service. JSoup is one such open source library that provides an API for extracting and manipulating data. Basically, it is an HTML parser used for working with various HTML elements, attributes etc."><meta itemprop="datePublished" content="2017-09-12T14:05:01+05:30" />
+<meta itemprop="dateModified" content="2017-09-12T14:05:01+05:30" />
+<meta itemprop="wordCount" content="430">
+<meta itemprop="keywords" content="development,Jsoup,data extraction,android," />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Threads Of Life" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Threads Of Life</div>
+					<div class="logo__tagline">Start..Pause...Run...but never STOP!</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/speaker-profile/">
+				
+				<span class="menu__text">Speaker Profile</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Using Jsoup on Android</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Karan Balkar</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-09-12T14:05:01&#43;05:30">Tuesday, Sep 12, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tech/" rel="category">Tech</a>, <a class="meta__link" href="/categories/android/" rel="category">Android</a>, <a class="meta__link" href="/categories/tips-and-tricks/" rel="category">Tips and tricks</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>Hello everyone!</p>
+<p align="justify">As Android developers, we often need to call web services in order to fetch data from a server. We also need to parse the data for displaying it on the user interface. There are various parsers available that enable developers to retrieve data efficiently from a web service. </p>
+<p align="justify"><a href="http://jsoup.org/" target="_blank">JSoup</a> is one such open source library that provides an API for extracting and manipulating data. Basically, it is an HTML parser used for working with various HTML elements, attributes etc. It can also find and extract data, using DOM traversal or CSS selectors. </p>
+<p align="justify">Through this post, we will learn how to use the JSoup library in Android </p>
+<p align="justify"><strong>Pre-requisites</strong>: Eclipse IDE, Android SDK </p>
+<p align="justify"><strong>Step 1</strong>: Let's first create a new Android application project called AndroidJSoupDemo with package name <strong>com.app.jsoupexample</strong>
+<p align="justify">JSoup implements the <strong>WHATWG</strong> HTML5 <a href="http://whatwg.org/html" target="_blank">specification</a>, and parses HTML to the same DOM as modern browsers do. In this case, we will parse an HTML page and display the data on the user interface.</p>
+<p align="justify"><strong>Step 2</strong>: Create Activity class </p>
+<p align="justify">Create the <em>MainActivity</em> class to parse HTML from a URL, file, or string. In this case, we have chosen a URL. JSoup will help create a sensible parse tree.</p>
+<p><strong>MainActivity.java</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.app.jsoupexample<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.jsoup.Jsoup<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.jsoup.nodes.Document<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.jsoup.select.Elements<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.app.Activity<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.app.ProgressDialog<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.os.AsyncTask<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.os.Bundle<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.view.View<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.widget.Button<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.widget.TextView<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MainActivity</span> <span style="color:#66d9ef">extends</span> Activity <span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;your-website-url-goes-here&gt;&#34;</span><span style="color:#f92672">;</span>
+	ProgressDialog mProgressDialog<span style="color:#f92672">;</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>Bundle savedInstanceState<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>savedInstanceState<span style="color:#f92672">);</span>
+		setContentView<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">activity_main</span><span style="color:#f92672">);</span>
+
+		Button btnFetchData <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Button<span style="color:#f92672">)</span> findViewById<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">btnData</span><span style="color:#f92672">);</span>
+		btnFetchData<span style="color:#f92672">.</span><span style="color:#a6e22e">setOnClickListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> View<span style="color:#f92672">.</span><span style="color:#a6e22e">OnClickListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+
+			<span style="color:#a6e22e">@Override</span>
+			<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">(</span>View v<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+				<span style="color:#75715e">// TODO Auto-generated method stub
+</span><span style="color:#75715e"></span>				<span style="color:#66d9ef">new</span> FetchWebsiteData<span style="color:#f92672">().</span><span style="color:#a6e22e">execute</span><span style="color:#f92672">();</span>
+			<span style="color:#f92672">}</span>
+		<span style="color:#f92672">});</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FetchWebsiteData</span> <span style="color:#66d9ef">extends</span> AsyncTask<span style="color:#f92672">&lt;</span>Void<span style="color:#f92672">,</span> Void<span style="color:#f92672">,</span> Void<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+		String websiteTitle<span style="color:#f92672">,</span> websiteDescription<span style="color:#f92672">;</span>
+
+		<span style="color:#a6e22e">@Override</span>
+		<span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onPreExecute</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onPreExecute</span><span style="color:#f92672">();</span>
+			mProgressDialog <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ProgressDialog<span style="color:#f92672">(</span>MainActivity<span style="color:#f92672">.</span><span style="color:#a6e22e">this</span><span style="color:#f92672">);</span>
+			mProgressDialog<span style="color:#f92672">.</span><span style="color:#a6e22e">setMessage</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Loading...&#34;</span><span style="color:#f92672">);</span>
+			mProgressDialog<span style="color:#f92672">.</span><span style="color:#a6e22e">setIndeterminate</span><span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+			mProgressDialog<span style="color:#f92672">.</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+		<span style="color:#f92672">}</span>
+
+		<span style="color:#a6e22e">@Override</span>
+		<span style="color:#66d9ef">protected</span> Void <span style="color:#a6e22e">doInBackground</span><span style="color:#f92672">(</span>Void<span style="color:#f92672">...</span> params<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+				<span style="color:#75715e">// Connect to website
+</span><span style="color:#75715e"></span>				Document document <span style="color:#f92672">=</span> Jsoup<span style="color:#f92672">.</span><span style="color:#a6e22e">connect</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">).</span><span style="color:#a6e22e">get</span><span style="color:#f92672">();</span>
+				<span style="color:#75715e">// Get the html document title
+</span><span style="color:#75715e"></span>				websiteTitle <span style="color:#f92672">=</span> document<span style="color:#f92672">.</span><span style="color:#a6e22e">title</span><span style="color:#f92672">();</span>
+                <span style="color:#75715e">// Get the description element
+</span><span style="color:#75715e"></span>				Elements description <span style="color:#f92672">=</span> document<span style="color:#f92672">.</span><span style="color:#a6e22e">select</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;meta[name=description]&#34;</span><span style="color:#f92672">);</span>
+				<span style="color:#75715e">// Locate the content attribute
+</span><span style="color:#75715e"></span>				websiteDescription <span style="color:#f92672">=</span> description<span style="color:#f92672">.</span><span style="color:#a6e22e">attr</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;content&#34;</span><span style="color:#f92672">);</span>
+			<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+				e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+			<span style="color:#f92672">}</span>
+			<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
+
+		<span style="color:#a6e22e">@Override</span>
+		<span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onPostExecute</span><span style="color:#f92672">(</span>Void result<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			<span style="color:#75715e">// Set title into TextView
+</span><span style="color:#75715e"></span>			TextView txttitle <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>TextView<span style="color:#f92672">)</span> findViewById<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">txtData</span><span style="color:#f92672">);</span>
+			txttitle<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>websiteTitle <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span> <span style="color:#f92672">+</span> websiteDescription<span style="color:#f92672">);</span>
+			mProgressDialog<span style="color:#f92672">.</span><span style="color:#a6e22e">dismiss</span><span style="color:#f92672">();</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>activity_main.xml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;RelativeLayout</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span style="color:#a6e22e">xmlns:tools=</span><span style="color:#e6db74">&#34;http://schemas.android.com/tools&#34;</span>
+    <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+    <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;match_parent&#34;</span> <span style="color:#f92672">&gt;</span>
+
+    <span style="color:#f92672">&lt;TextView</span>
+        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/txtData&#34;</span>
+        <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        <span style="color:#a6e22e">android:gravity=</span><span style="color:#e6db74">&#34;center&#34;</span> <span style="color:#f92672">/&gt;</span>
+
+    <span style="color:#f92672">&lt;Button</span>
+        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/btnData&#34;</span>
+        <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;fill_parent&#34;</span>
+        <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        <span style="color:#a6e22e">android:layout_below=</span><span style="color:#e6db74">&#34;@+id/txtData&#34;</span>
+        <span style="color:#a6e22e">android:text=</span><span style="color:#e6db74">&#34;@string/data&#34;</span> <span style="color:#f92672">/&gt;</span>
+
+<span style="color:#f92672">&lt;/RelativeLayout&gt;</span>
+</code></pre></div><p align="justify"><strong>Note</strong>: Before running the application, make sure you add the <em>android.permission.INTERNET</em> in your <strong>AndroidManifest.xml</strong> file. </p>
+<p align="justify">Save all changes. Make sure no errors are present. Run the project on an Android device and you should see the following output! </p>
+<p><img src="/custom/images/android_jsoup_output_1.png" alt="android_jsoup_output_1"></p>
+<p><img src="/custom/images/android_jsoup_output_2.png" alt="android_jsoup_output_2"></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/development/" rel="tag">development</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/jsoup/" rel="tag">Jsoup</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/data-extraction/" rel="tag">data extraction</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/android/" rel="tag">android</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Karan Balkar avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Karan Balkar</span>
+	</div>
+	<div class="authorbox__description">
+		Karan Balkar is a mobile application developer primarily working on Android since the past 5 years. He has also worked on Augmented reality / Virtual reality based mobile applications and is passionate about exploring new innovative technologies.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/implement-content-provider-in-android/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Implement Content Provider in Android</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/using-proximity-sensor-in-android/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Using Proximity Sensor in Android</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "threadsoflifeblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Threads Of Life
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

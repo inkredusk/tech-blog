@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/web/</link>
+    <description>Recent content in web on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Oct 2021 21:15:32 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Experiments With Annyang!</title>
+      <link>https://karanbalkar.com/posts/my-experiments-with-annyang/</link>
+      <pubDate>Fri, 22 Oct 2021 21:15:32 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/my-experiments-with-annyang/</guid>
+      <description>Note: Please allow access to microphone to use speech recognition feature.
+ Hi everyone!
+Speech recognition has always being one of those features that is always perceived to be good based on it&amp;rsquo;s acccuracy. There exists a ton of libraries today that offer this functionality in almost any kind of app.
+I happened to stumble upon Annyang a few weeks back and wanted to try it in an existing PWA (Progressive Web App).</description>
+    </item>
+    
+  </channel>
+</rss>

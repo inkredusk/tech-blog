@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clipboard and textinput on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/clipboard-and-textinput/</link>
+    <description>Recent content in clipboard and textinput on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Nov 2015 08:26:00 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/clipboard-and-textinput/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Kivy: Clipboard and Text Input</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-clipboard-and-textinput/</link>
+      <pubDate>Thu, 19 Nov 2015 08:26:00 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-clipboard-and-textinput/</guid>
+      <description>Hey everyone!
+It&#39;s time for another cool Kivy tutorial. In this one I will explain how to use the Clipboard core module to copy text from a Text Input widget. The text thus copied will be applied to a Button, displayed in our layout.
+Kivy provides a core class for accessing the Clipboard. It is used mainly to copy some data so that it can be used somewhere else. On the other hand, the Text Input widget provides a box of editable plain text.</description>
+    </item>
+    
+  </channel>
+</rss>

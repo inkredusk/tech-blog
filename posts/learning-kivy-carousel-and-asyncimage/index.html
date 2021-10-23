@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Learning Kivy : Carousel and AsyncImage - Threads Of Life</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Learning Kivy : Carousel and AsyncImage" />
+<meta property="og:description" content="Hello everyone!
+Today I will talk about two interesting Widgets of the Kivy framework. Both these widgets can be used to display/load images in a particular manner.
+1. Carousel
+As mentioned in the Kivy docs, the Carousel widget provides a mobile-friendly carousel view where one can swipe between slides. One can add any content to the carousel and use it horizontally or vertically. The carousel can display pages in loop. One can also navigate to the next slide or the previous slide using the Carousel properties." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karanbalkar.com/posts/learning-kivy-carousel-and-asyncimage/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-10-17T15:24:10+05:30" />
+<meta property="article:modified_time" content="2015-10-17T15:24:10+05:30" />
+
+
+		<meta itemprop="name" content="Learning Kivy : Carousel and AsyncImage">
+<meta itemprop="description" content="Hello everyone!
+Today I will talk about two interesting Widgets of the Kivy framework. Both these widgets can be used to display/load images in a particular manner.
+1. Carousel
+As mentioned in the Kivy docs, the Carousel widget provides a mobile-friendly carousel view where one can swipe between slides. One can add any content to the carousel and use it horizontally or vertically. The carousel can display pages in loop. One can also navigate to the next slide or the previous slide using the Carousel properties."><meta itemprop="datePublished" content="2015-10-17T15:24:10+05:30" />
+<meta itemprop="dateModified" content="2015-10-17T15:24:10+05:30" />
+<meta itemprop="wordCount" content="410">
+<meta itemprop="keywords" content="development,kivy,carousel,asyncimage,python," />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Threads Of Life" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Threads Of Life</div>
+					<div class="logo__tagline">Start..Pause...Run...but never STOP!</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/speaker-profile/">
+				
+				<span class="menu__text">Speaker Profile</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Learning Kivy : Carousel and AsyncImage</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Karan Balkar</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2015-10-17T15:24:10&#43;05:30">Saturday, Oct 17, 2015</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tech/" rel="category">Tech</a>, <a class="meta__link" href="/categories/kivy/" rel="category">Kivy</a>, <a class="meta__link" href="/categories/tips-and-tricks/" rel="category">Tips and tricks</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>Hello everyone!</p>
+<p align="justify">Today I will talk about two interesting <a href="http://kivy.org/docs/guide/widgets.html" target="_blank">Widgets</a> of the Kivy framework. Both these widgets can be used to display/load images in a particular manner.</p>
+<p align="justify"><strong>1. Carousel</strong></p>
+<p align="justify">As mentioned in the Kivy docs, the <a href="http://kivy.org/docs/api-kivy.uix.carousel.html" target="_blank">Carousel</a> widget provides a <strong>mobile-friendly</strong> carousel view where one can swipe between slides. One can add any content to the carousel and use it horizontally or vertically. The carousel can display pages in <a href="http://kivy.org/docs/api-kivy.uix.carousel.html#kivy.uix.carousel.Carousel.loop" target="_blank">loop</a>. One can also navigate to the next slide or the previous slide using the Carousel <a href="http://kivy.org/docs/api-kivy.uix.carousel.html#kivy.uix.carousel.Carousel.previous_slide" target="_blank">properties</a>.</p>
+<p align="justify">Here's how we can use the Carousel view!</p>
+<p align="justify"><strong>Step 1:</strong> Create a folder named <strong>images</strong> on your disk and copy a few pictures inside that folder. I have added a few images for my project. Download the <em>source code</em> from the below link to view them.</p>
+<p align="justify"><strong>Step 2:</strong> Open the Python IDLE. Create a new Python script and type the following code! </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">
+<span style="color:#f92672">from</span> kivy.app <span style="color:#f92672">import</span> App
+<span style="color:#f92672">from</span> kivy.uix.carousel <span style="color:#f92672">import</span> Carousel
+<span style="color:#f92672">from</span> kivy.factory <span style="color:#f92672">import</span> Factory
+<span style="color:#f92672">from</span> kivy.uix.image <span style="color:#f92672">import</span> Image
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Example1</span>(App):
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build</span>(self):
+        <span style="color:#75715e">#define the carousel</span>
+        carousel <span style="color:#f92672">=</span> Carousel(direction<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;right&#39;</span>,loop<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;true&#39;</span>)
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>):
+            <span style="color:#75715e">#load pictures from images folder</span>
+            src <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;images/</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">.jpg&#34;</span> <span style="color:#f92672">%</span> i
+            image <span style="color:#f92672">=</span> Image(source<span style="color:#f92672">=</span>src,pos<span style="color:#f92672">=</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">100</span>), size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>))
+            carousel<span style="color:#f92672">.</span>add_widget(image)
+        <span style="color:#66d9ef">return</span> carousel
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    Example1()<span style="color:#f92672">.</span>run()
+
+</code></pre></div><p align="justify"><strong>Step 3:</strong> Save the file as <strong>Example1.py</strong>. Make sure to save the Python file inside the <em>same directory</em> as that of the <strong>images</strong> folder.</p>
+<p align="justify"><strong>Step 4:</strong> Open command prompt. Navigate to the directory where you have your Python script. Type <strong>kivy Example1.py</strong> and press enter. You should get a carousel view of various fruit images!</p>
+<p><img src="/custom/images/kivy_carousel_view.png" alt="kivy_carousel_view"></p>
+<p align="justify"><strong>2. AsyncImage </strong></p>
+<p align="justify">Now, the <a href="http://kivy.org/docs/api-kivy.uix.image.html?highlight=async%20image#kivy.uix.image.AsyncImage" target="_blank">AsyncImage</a> class is used to load images asynchronously from an external webserver. All one needs to do is specify the URL of the website that contains the data. One can use <strong>AsyncImage</strong> in combination with<strong> Carousel</strong> to load and display images. </p>
+<p align="justify">Once again create a new Python script. Add the following code. Run it as explained previously and you should see some images getting loaded asynchronously! </p>
+<p align="justify">Here's a short implementation of the AsyncImage class along with the Carousel view.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> kivy.app <span style="color:#f92672">import</span> App
+<span style="color:#f92672">from</span> kivy.uix.carousel <span style="color:#f92672">import</span> Carousel
+<span style="color:#f92672">from</span> kivy.factory <span style="color:#f92672">import</span> Factory
+<span style="color:#f92672">from</span> kivy.uix.image <span style="color:#f92672">import</span> Image
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Example1</span>(App):
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build</span>(self):
+        carousel <span style="color:#f92672">=</span> Carousel(direction<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;right&#39;</span>,loop<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;true&#39;</span>)
+        
+        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">5</span>):
+            src <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;http://placehold.it/480x270.png&amp;text=slide-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&amp;.png&#34;</span> <span style="color:#f92672">%</span> i
+            <span style="color:#75715e">#load images asynchronously</span>
+            image <span style="color:#f92672">=</span> Factory<span style="color:#f92672">.</span>AsyncImage(source<span style="color:#f92672">=</span>src, allow_stretch<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+            carousel<span style="color:#f92672">.</span>add_widget(image)
+        <span style="color:#66d9ef">return</span> carousel
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    Example1()<span style="color:#f92672">.</span>run()
+</code></pre></div><p align="justify">So that's it for this post. I will talk about the <a href="http://kivy.org/docs/api-kivy.graphics.html" target="_blank">Graphics</a> module of the Kivy framework in my further posts! Enjoy! 😄 </p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/development/" rel="tag">development</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/kivy/" rel="tag">kivy</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/carousel/" rel="tag">carousel</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/asyncimage/" rel="tag">asyncimage</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/python/" rel="tag">python</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Karan Balkar avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Karan Balkar</span>
+	</div>
+	<div class="authorbox__description">
+		Karan Balkar is a mobile application developer primarily working on Android since the past 5 years. He has also worked on Augmented reality / Virtual reality based mobile applications and is passionate about exploring new innovative technologies.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/learning-kivy-accordion/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Learning Kivy : Accordion</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/learning-kivy-canvas/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Learning Kivy : Canvas</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "threadsoflifeblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Threads Of Life
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

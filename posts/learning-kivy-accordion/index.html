@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Learning Kivy : Accordion - Threads Of Life</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Learning Kivy : Accordion" />
+<meta property="og:description" content="Hey everyone!
+Working on Kivy has been an amazing learning experience. Kivy has made user interface development a lot easier. Today, I will talk about Accordion, one of the interesting widgets that Kivy has to offer to developers out there.
+What is an Accordion ?
+Accordion is basically a Widget in the form of a menu where in the options are stacked either horizontally or vertically. An Accordion will contain one or many AccordionItem instances such that each item when touched opens up displaying it&#39;s underlying content." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karanbalkar.com/posts/learning-kivy-accordion/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2015-07-20T07:54:39+05:30" />
+<meta property="article:modified_time" content="2015-07-20T07:54:39+05:30" />
+
+
+		<meta itemprop="name" content="Learning Kivy : Accordion">
+<meta itemprop="description" content="Hey everyone!
+Working on Kivy has been an amazing learning experience. Kivy has made user interface development a lot easier. Today, I will talk about Accordion, one of the interesting widgets that Kivy has to offer to developers out there.
+What is an Accordion ?
+Accordion is basically a Widget in the form of a menu where in the options are stacked either horizontally or vertically. An Accordion will contain one or many AccordionItem instances such that each item when touched opens up displaying it&#39;s underlying content."><meta itemprop="datePublished" content="2015-07-20T07:54:39+05:30" />
+<meta itemprop="dateModified" content="2015-07-20T07:54:39+05:30" />
+<meta itemprop="wordCount" content="380">
+<meta itemprop="keywords" content="development,kivy,UI Accordion,python," />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Threads Of Life" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Threads Of Life</div>
+					<div class="logo__tagline">Start..Pause...Run...but never STOP!</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/speaker-profile/">
+				
+				<span class="menu__text">Speaker Profile</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Learning Kivy : Accordion</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Karan Balkar</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2015-07-20T07:54:39&#43;05:30">Monday, Jul 20, 2015</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tech/" rel="category">Tech</a>, <a class="meta__link" href="/categories/kivy/" rel="category">Kivy</a>, <a class="meta__link" href="/categories/tips-and-tricks/" rel="category">Tips and tricks</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>Hey everyone!</p>
+<p align="justify">Working on Kivy has been an amazing learning experience. Kivy has made user interface development a lot easier. Today, I will talk about <strong>Accordion</strong>, one of the interesting widgets that Kivy has to offer to developers out there.</p>
+<p><strong>What is an Accordion ?</strong></p>
+<p align="justify"><strong>Accordion</strong> is basically a <a href="http://kivy.org/docs/api-kivy.uix.widget.html" target="_blank">Widget</a> in the form of a menu where in the options are stacked either horizontally or vertically. An <strong>Accordion</strong> will contain one or many <a href="http://kivy.org/docs/api-kivy.uix.accordion.html?highlight=accordion#kivy.uix.accordion.AccordionItem" target="_blank">AccordionItem</a> instances such that each item when touched opens up displaying it's underlying content.</p>
+<p>The current implementation divides the <strong>AccordionItem</strong> into two parts:</p>
+<ul>
+<li>One container for the title bar</li>
+<li>One container for the content</li>
+</ul>
+<p align="justify">The title bar is made from a <strong>Kv template</strong>. In order to customize the title bar you need to design your own template.</p>
+<p align="justify">The current default template is present in the  <em><strong>kivy/data/style.kv</strong></em> file. </p>
+<p align="justify">Here is a small implementation of the code required to build your own template that I found in the <a href="http://kivy.org/docs/api-kivy.uix.accordion.html?highlight=accordion#kivy.uix.accordion.AccordionItem.title" target="_blank">Kivy docs</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">[AccordionItemTitle<span style="color:#a6e22e">@Label</span>]:
+    text: ctx<span style="color:#f92672">.</span>title
+    canvas<span style="color:#f92672">.</span>before:
+        Color:
+            rgb: <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>
+        BorderImage:
+            source:
+                ctx<span style="color:#f92672">.</span>item<span style="color:#f92672">.</span>background_normal \
+                <span style="color:#66d9ef">if</span> ctx<span style="color:#f92672">.</span>item<span style="color:#f92672">.</span>collapse \
+                <span style="color:#66d9ef">else</span> ctx<span style="color:#f92672">.</span>item<span style="color:#f92672">.</span>background_selected
+            pos: self<span style="color:#f92672">.</span>pos
+            size: self<span style="color:#f92672">.</span>size
+        PushMatrix
+        Translate:
+            xy: self<span style="color:#f92672">.</span>center_x, self<span style="color:#f92672">.</span>center_y
+        Rotate:
+            angle: <span style="color:#ae81ff">90</span> <span style="color:#66d9ef">if</span> ctx<span style="color:#f92672">.</span>item<span style="color:#f92672">.</span>orientation <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;horizontal&#39;</span> <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">0</span>
+            axis: <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>
+        Translate:
+            xy: <span style="color:#f92672">-</span>self<span style="color:#f92672">.</span>center_x, <span style="color:#f92672">-</span>self<span style="color:#f92672">.</span>center_y
+    canvas<span style="color:#f92672">.</span>after:
+        PopMatrix
+
+</code></pre></div><p align="justify">Now, let's start creating a simple Kivy app that displays an <strong>Accordion</strong> widget. Open Python IDLE. Create a new file named <strong>Accordion.py</strong> and start writing the following code!</p>
+<p align="justify">In this example, I will be displaying images as my content when the user touches an item. For each item a different image would exist!</p>
+<p><strong>Accordion.py</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> kivy.uix.accordion <span style="color:#f92672">import</span> Accordion, AccordionItem
+<span style="color:#f92672">from</span> kivy.uix.image <span style="color:#f92672">import</span> Image
+<span style="color:#f92672">from</span> kivy.app <span style="color:#f92672">import</span> App
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SampleAccorApp</span>(App):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">build</span>(self):
+        <span style="color:#75715e"># you can change orientation to horizontal as well</span>
+        root <span style="color:#f92672">=</span> Accordion(orientation<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;vertical&#39;</span>)
+        <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> xrange(<span style="color:#ae81ff">5</span>):
+            item<span style="color:#f92672">=</span> AccordionItem(title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Image </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span>x)
+            src <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;images/</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">.jpg&#34;</span> <span style="color:#f92672">%</span> x
+            image <span style="color:#f92672">=</span> Image(source<span style="color:#f92672">=</span>src,pos<span style="color:#f92672">=</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">100</span>), size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>))
+            <span style="color:#75715e"># add image to AccordionItem</span>
+            item<span style="color:#f92672">.</span>add_widget(image)
+            root<span style="color:#f92672">.</span>add_widget(item)
+        <span style="color:#66d9ef">return</span> root
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    SampleAccorApp()<span style="color:#f92672">.</span>run()
+
+</code></pre></div><p align="justify">Run the above code by writing <strong>kivy Accordion.py</strong> inside command prompt.</p>
+<p><img src="/custom/images/kivy_accordion_1.png" alt="kivy_accordion_1"></p>
+<p><img src="/custom/images/kivy_accordion_2.png" alt="kivy_accordion_2"></p>
+<p align="justify">As compared to Accordion, the AccordionItem is more configurable and customizable. For example, you can set your own title background when the item is collapsed or opened.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">    item <span style="color:#f92672">=</span> AccordionItem(background_normal<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;image_when_collapsed.png&#39;</span>,
+    background_selected<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;image_when_selected.png&#39;</span>)
+</code></pre></div><p align="justify">So, that's it for this post. Hope it helps you in some way! Thanks 😄 </p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/development/" rel="tag">development</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/kivy/" rel="tag">kivy</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/ui-accordion/" rel="tag">UI Accordion</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/python/" rel="tag">python</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Karan Balkar avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Karan Balkar</span>
+	</div>
+	<div class="authorbox__description">
+		Karan Balkar is a mobile application developer primarily working on Android since the past 5 years. He has also worked on Augmented reality / Virtual reality based mobile applications and is passionate about exploring new innovative technologies.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/getting-started-with-kivy/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Getting Started With Kivy</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/learning-kivy-carousel-and-asyncimage/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Learning Kivy : Carousel and AsyncImage</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "threadsoflifeblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Threads Of Life
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

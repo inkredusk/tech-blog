@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>augmented reality on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/augmented-reality/</link>
+    <description>Recent content in augmented reality on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Jan 2021 12:13:03 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/augmented-reality/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Threejs to Display 3d Model</title>
+      <link>https://karanbalkar.com/posts/using-threejs-to-display-3d-model/</link>
+      <pubDate>Sat, 23 Jan 2021 12:13:03 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/using-threejs-to-display-3d-model/</guid>
+      <description>Hi everyone!
+Three.js is a popular JavaScript library used to display 3D graphics in a web browser using WebGL. It is especially useful when developing AR/VR based applications.
+A simple implementation could involve rendering a 3D model on the browser. Three.js provides a base class Loader through which developers can load 3D models depending upon the type of the model. The .obj file format is one of the most common formats for 3D models.</description>
+    </item>
+    
+  </channel>
+</rss>

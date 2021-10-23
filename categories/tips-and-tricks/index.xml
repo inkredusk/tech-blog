@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips and tricks on Threads Of Life</title>
+    <link>https://karanbalkar.com/categories/tips-and-tricks/</link>
+    <description>Recent content in Tips and tricks on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Oct 2021 21:15:32 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/categories/tips-and-tricks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Experiments With Annyang!</title>
+      <link>https://karanbalkar.com/posts/my-experiments-with-annyang/</link>
+      <pubDate>Fri, 22 Oct 2021 21:15:32 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/my-experiments-with-annyang/</guid>
+      <description>Note: Please allow access to microphone to use speech recognition feature.
+ Hi everyone!
+Speech recognition has always being one of those features that is always perceived to be good based on it&amp;rsquo;s acccuracy. There exists a ton of libraries today that offer this functionality in almost any kind of app.
+I happened to stumble upon Annyang a few weeks back and wanted to try it in an existing PWA (Progressive Web App).</description>
+    </item>
+    
+    <item>
+      <title>Chaos in the World of Jenkins</title>
+      <link>https://karanbalkar.com/posts/chaos-in-the-world-of-jenkins/</link>
+      <pubDate>Fri, 22 Oct 2021 19:15:50 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/chaos-in-the-world-of-jenkins/</guid>
+      <description>Hello everyone!
+Imagine a tool that regularly stop certain build processes in an existing CI/CD pipeline in order to ensure that the underlying infrastructure is indeed fault resilient.
+Chaos engineering has been in the news for quite some time now and it is important for software engineers to determine the resiliency of the system. We often develop scalable, complex micro-services that connect to multiple systems but seldom do we think about the fact that what if one of the them does not work or is shut down completely.</description>
+    </item>
+    
+    <item>
+      <title>Detect and use light and gyroscope sensors in Android</title>
+      <link>https://karanbalkar.com/posts/detect-use-light-gyroscope-sensors-android/</link>
+      <pubDate>Tue, 19 Oct 2021 07:53:34 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/detect-use-light-gyroscope-sensors-android/</guid>
+      <description>Hello everyone!
+Sensors play a vital role in any electronic device and more importantly help in detecting or measuring a physical property. Nowadays, Android phones come equipped with a range of sensors including light, pressure, temperature, gyroscope, proximity etc. Developers need to build applications using the functionality of these sensors. For that purpose, one needs to learn how to detect and implement the corresponding sensor functionality. Through this post, we will understand how to detect and use the Light and Gyroscope sensors in Android.</description>
+    </item>
+    
+    <item>
+      <title>Base64 encoding and decoding using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/base64-encoding-decoding-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 14:37:49 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/base64-encoding-decoding-using-qt5/</guid>
+      <description>Hi everyone!
+In one of my previous posts, we had learnt how to configure and setup Qt for Windows. Base64 is basically a method using which we can encode binary data into a character set in order to transmit the data without any loss or modification of the contents. It is a group of similar binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation.</description>
+    </item>
+    
+    <item>
+      <title>Sending Http Request Using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/sending-http-request-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 11:20:05 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/sending-http-request-using-qt5/</guid>
+      <description>HTTP (Hypertext Transfer Protocol) works as a request-response protocol between a client and server. A web browser may be the client, and an application on a computer that hosts a web site may be the server. For example, a client (browser) submits an HTTP request to the server and then the server returns a response to the client. The response contains status information about the request as well as the requested content.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started With Qt</title>
+      <link>https://karanbalkar.com/posts/getting-started-with-qt/</link>
+      <pubDate>Mon, 18 Oct 2021 11:03:43 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/getting-started-with-qt/</guid>
+      <description>Hi guys,
+Qt is a cross-platform application framework used extensively for developing non-GUI programs and consoles for servers. It is written in C++ and works on major platforms including Android, iOS, Windows and more recently Sailfish MeeGo Linux. There exists three versions of Qt available on each of these platforms, namely:
+GUI Framework – commercial entry level GUI edition, stripped of network and database support (formerly named &amp;ldquo;Desktop Light&amp;rdquo;)
+Full Framework – complete commercial edition Open Source – complete Open Source edition</description>
+    </item>
+    
+    <item>
+      <title>Parsing JSON using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/parsing-json-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 10:49:10 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/parsing-json-using-qt5/</guid>
+      <description>Hello friends!
+In one of my previous posts, we had seen how to send a HTTP request using Qt. The response we got then was a JSON string. JSON is a subset of the object literal notation of JavaScript. It is basically a lightweight data-interchange format making it easy for humans to read and write. A JSON is build on two structures namely,
+ A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list or associative array.</description>
+    </item>
+    
+    <item>
+      <title>Zipping and unzipping files using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/zipping-unzipping-files-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 08:38:26 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/zipping-unzipping-files-using-qt5/</guid>
+      <description>Hey everyone!
+Qt provides a QByteArray class that can be used to store raw bytes and traditional 8-bit terminated strings. Moreover, Qt also provides the QString class to store string data. QString is mainly used throughout the Qt API.
+Through this post, we will learn how to zip and unzip files using Qt. We will create a sample text file containing a message as follows,
+demo.txt
+This is a demo to zip and unzip files using Qt framework Pre-requisites: Qt Creator, MinGW compiler for Windows (64 bit)</description>
+    </item>
+    
+    <item>
+      <title>Using Threejs to Display 3d Model</title>
+      <link>https://karanbalkar.com/posts/using-threejs-to-display-3d-model/</link>
+      <pubDate>Sat, 23 Jan 2021 12:13:03 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/using-threejs-to-display-3d-model/</guid>
+      <description>Hi everyone!
+Three.js is a popular JavaScript library used to display 3D graphics in a web browser using WebGL. It is especially useful when developing AR/VR based applications.
+A simple implementation could involve rendering a 3D model on the browser. Three.js provides a base class Loader through which developers can load 3D models depending upon the type of the model. The .obj file format is one of the most common formats for 3D models.</description>
+    </item>
+    
+    <item>
+      <title>Execute batch file using Oracle Job Scheduler</title>
+      <link>https://karanbalkar.com/posts/execute-batch-file-using-oracle-job-scheduler/</link>
+      <pubDate>Sat, 20 Oct 2018 15:20:53 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/execute-batch-file-using-oracle-job-scheduler/</guid>
+      <description>Hey everyone!
+The Oracle database includes a built-in scheduler that allows scheduling functions and procedures that can be called from any PL/SQL program. The DBMS_SCHEDULER package introduced in Oracle 10g helps to create, run and monitor jobs. In addition, one can also define a job to execute a batch (.bat) file. In order to run an external job, you need to enable and start the OracleJobScheduler service on the database server.</description>
+    </item>
+    
+    <item>
+      <title>Handling Screen Orientation Android</title>
+      <link>https://karanbalkar.com/posts/handling-screen-orientation-android/</link>
+      <pubDate>Thu, 18 Oct 2018 17:28:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/handling-screen-orientation-android/</guid>
+      <description>It is observed that when device configurations including screen orientation, keyboard availability etc change, Android restarts the current Activity. This is done to enable the application to adapt to the new configuration.
+In order to declare an Activity that handles configuration changes we must add the android:configChanges attribute with a value that represents the configuration we want to handle, in our AndroidManifest.xml file. There are basically two ways to handle screen orientation in Android.</description>
+    </item>
+    
+    <item>
+      <title>Processing for Android</title>
+      <link>https://karanbalkar.com/posts/processing-for-android/</link>
+      <pubDate>Sat, 18 Aug 2018 20:56:34 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/processing-for-android/</guid>
+      <description>Hello everyone!
+The Processing language has now become a popular development tool for Android applications. It&#39;s latest version 2.0+ allows developers to create an Android application from scratch using the newly added Android mode.
+Processing supports many libraries including video, network, PDF export etc. Just as Android, Processing is also open source and can be downloaded for free. Through this post, I will demonstrate how to create an Android application using Processing!</description>
+    </item>
+    
+    <item>
+      <title>Implement Spell Checker Android</title>
+      <link>https://karanbalkar.com/posts/implement-spell-checker-android/</link>
+      <pubDate>Wed, 18 Oct 2017 13:38:30 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/implement-spell-checker-android/</guid>
+      <description>Hi everyone!
+Spell check is of the most common programs used to identify words in a document that may not be spelled correctly. Today, one need not carry a dictionary to self spell check. The age of mobile technology has given rise to a number of applications that incorporate the spell checking functionality. Android offers developers a spelling checker framework. In order to implement the spell checking feature, developers need to make use of the SpellCheckerSessionListener interface.</description>
+    </item>
+    
+    <item>
+      <title>Using Proximity Sensor in Android</title>
+      <link>https://karanbalkar.com/posts/using-proximity-sensor-in-android/</link>
+      <pubDate>Tue, 17 Oct 2017 13:53:26 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/using-proximity-sensor-in-android/</guid>
+      <description>Hello everyone!
+The term proximity is basically the fact, condition or position of being near or close by in space. A proximity sensor is a device capable of detecting presence of nearby objects without any physical contact. Some of the Android phones in the market today come equipped with a proximity sensor.
+Through this post, we will learn how to use a proximity sensor in Android. As mentioned in the developer&#39;s guide, the Android platform provides a sensor that lets you determine how close the face of a device is to an object (known as the proximity sensor).</description>
+    </item>
+    
+    <item>
+      <title>Using Jsoup on Android</title>
+      <link>https://karanbalkar.com/posts/using-jsoup-on-android/</link>
+      <pubDate>Tue, 12 Sep 2017 14:05:01 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/using-jsoup-on-android/</guid>
+      <description>Hello everyone!
+As Android developers, we often need to call web services in order to fetch data from a server. We also need to parse the data for displaying it on the user interface. There are various parsers available that enable developers to retrieve data efficiently from a web service. JSoup is one such open source library that provides an API for extracting and manipulating data. Basically, it is an HTML parser used for working with various HTML elements, attributes etc.</description>
+    </item>
+    
+    <item>
+      <title>Implement Content Provider in Android</title>
+      <link>https://karanbalkar.com/posts/implement-content-provider-in-android/</link>
+      <pubDate>Sat, 20 May 2017 08:47:31 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/implement-content-provider-in-android/</guid>
+      <description>Hey everyone!
+As developers, we often need to create applications that can share data with other applications residing on the Android device. A content provider is similar to a database where one can query it, edit its content, as well as add or delete content using insert, update, delete, and query methods. As mentioned on the developer&#39;s page, Content providers manage access to a structured set of data. They encapsulate the data, and provide mechanisms for defining data security.</description>
+    </item>
+    
+    <item>
+      <title>Learning Kivy: Clipboard and Text Input</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-clipboard-and-textinput/</link>
+      <pubDate>Thu, 19 Nov 2015 08:26:00 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-clipboard-and-textinput/</guid>
+      <description>Hey everyone!
+It&#39;s time for another cool Kivy tutorial. In this one I will explain how to use the Clipboard core module to copy text from a Text Input widget. The text thus copied will be applied to a Button, displayed in our layout.
+Kivy provides a core class for accessing the Clipboard. It is used mainly to copy some data so that it can be used somewhere else. On the other hand, the Text Input widget provides a box of editable plain text.</description>
+    </item>
+    
+    <item>
+      <title>Implement Lightbox using jQuery plugin</title>
+      <link>https://karanbalkar.com/posts/implement-lightbox-using-jquery-plugin/</link>
+      <pubDate>Mon, 19 Oct 2015 08:17:53 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/implement-lightbox-using-jquery-plugin/</guid>
+      <description>Hi guys!
+Lightbox is a well-known JavaScript technique used to display images or any web content using modal dialogs. Not too long ago, the lightbox plugin was written in jQuery that allowed developers to modify the code and come up with new plugins that carry out the same task.
+Colorbox is one such jQuery plugin that we can use to implement a lightbox. Through this post, I will try to implement a sample HTML page that displays a lightbox using the Colorbox plugin.</description>
+    </item>
+    
+    <item>
+      <title>Turn Off Recycle Bin Option Oracle</title>
+      <link>https://karanbalkar.com/posts/turn-off-recycle-bin-option-oracle/</link>
+      <pubDate>Sun, 18 Oct 2015 20:53:15 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/turn-off-recycle-bin-option-oracle/</guid>
+      <description>Hello everyone!
+Starting from Oracle version 10g, a new feature known as RecycleBin was introduced to recover dropped tables. Dropped tables go &#34;into&#34; the recyclebin, and can be restored (undropped) from the recyclebin.
+By default the RECYCLEBIN option is ON. Hence you can recover the tables dropped, by using the FLASHBACK table command as follows!
+Pre-requisites: Oracle database 10g Express Edition with *SQLPlus Open *SQLPlus and run the following commands! DROP TABLE YOURTABLENAME; FLASHBACK TABLE YOURTABLENAME TO BEFORE DROP; Check parameter RECYCLEBIN using the below command</description>
+    </item>
+    
+    <item>
+      <title>Learning Kivy : TabbedPanel</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-tabbedpanel/</link>
+      <pubDate>Sun, 18 Oct 2015 15:40:54 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-tabbedpanel/</guid>
+      <description>Hello everyone!
+Today&#39;s Kivy tutorial talks about one of the existing complex UX widgets called TabbedPanel. The TabbedPanel widget manages different widgets in tabs. It consists of a header area for the actual tab buttons and a content area for showing the current tab content. Before you begin implementing this widget you need to understand the concept of a TabbedPanelHeader.
+What is a TabbedPanelHeader? An individual tab is called a TabbedPanelHeader.</description>
+    </item>
+    
+    <item>
+      <title>Learning Kivy : Canvas</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-canvas/</link>
+      <pubDate>Sun, 18 Oct 2015 15:17:23 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-canvas/</guid>
+      <description>Hey everyone!
+In my previous Kivy tutorial I talked about the Carousel widget and the AsyncImage class that one can use to display and load images respectively. Today I would be talking about the Graphics module of the Kivy framework! 1. Graphics  (kivy.graphics) From the Kivy documentation, the Graphics package assembles all low level functions to draw an object.The entire package is compatible with OpenGL ES 2.0 and has a lot of rendering optimizations.</description>
+    </item>
+    
+    <item>
+      <title>Learning Kivy : Carousel and AsyncImage</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-carousel-and-asyncimage/</link>
+      <pubDate>Sat, 17 Oct 2015 15:24:10 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-carousel-and-asyncimage/</guid>
+      <description>Hello everyone!
+Today I will talk about two interesting Widgets of the Kivy framework. Both these widgets can be used to display/load images in a particular manner.
+1. Carousel
+As mentioned in the Kivy docs, the Carousel widget provides a mobile-friendly carousel view where one can swipe between slides. One can add any content to the carousel and use it horizontally or vertically. The carousel can display pages in loop. One can also navigate to the next slide or the previous slide using the Carousel properties.</description>
+    </item>
+    
+    <item>
+      <title>Learning Kivy : Accordion</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-accordion/</link>
+      <pubDate>Mon, 20 Jul 2015 07:54:39 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-accordion/</guid>
+      <description>Hey everyone!
+Working on Kivy has been an amazing learning experience. Kivy has made user interface development a lot easier. Today, I will talk about Accordion, one of the interesting widgets that Kivy has to offer to developers out there.
+What is an Accordion ?
+Accordion is basically a Widget in the form of a menu where in the options are stacked either horizontally or vertically. An Accordion will contain one or many AccordionItem instances such that each item when touched opens up displaying it&#39;s underlying content.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started With Kivy</title>
+      <link>https://karanbalkar.com/posts/getting-started-with-kivy/</link>
+      <pubDate>Fri, 20 Feb 2015 09:00:49 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/getting-started-with-kivy/</guid>
+      <description>Kivy is a popular cross platform open source library for developing applications involving different user interfaces. Currently, Kivy runs on Linux, Windows, Mac OSX, Android and iOS.
+Let&amp;rsquo;s start by downloading Kivy for Windows  from here : Kivy for Windows. Unzip the downloaded file to find the kivy.bat file shown below:
+Copy the path to this folder. Now right click My Computer -&amp;gt; Properties -&amp;gt; Advanced System Settings -&amp;gt; Environment Variables Select Path  under System variables and click on Edit.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chaos engineering on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/chaos-engineering/</link>
+    <description>Recent content in chaos engineering on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Oct 2021 19:15:50 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/chaos-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chaos in the World of Jenkins</title>
+      <link>https://karanbalkar.com/posts/chaos-in-the-world-of-jenkins/</link>
+      <pubDate>Fri, 22 Oct 2021 19:15:50 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/chaos-in-the-world-of-jenkins/</guid>
+      <description>Hello everyone!
+Imagine a tool that regularly stop certain build processes in an existing CI/CD pipeline in order to ensure that the underlying infrastructure is indeed fault resilient.
+Chaos engineering has been in the news for quite some time now and it is important for software engineers to determine the resiliency of the system. We often develop scalable, complex micro-services that connect to multiple systems but seldom do we think about the fact that what if one of the them does not work or is shut down completely.</description>
+    </item>
+    
+  </channel>
+</rss>

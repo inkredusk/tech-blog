@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tabbedpanel on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/tabbedpanel/</link>
+    <description>Recent content in tabbedpanel on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Oct 2015 15:40:54 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/tabbedpanel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Kivy : TabbedPanel</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-tabbedpanel/</link>
+      <pubDate>Sun, 18 Oct 2015 15:40:54 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-tabbedpanel/</guid>
+      <description>Hello everyone!
+Today&#39;s Kivy tutorial talks about one of the existing complex UX widgets called TabbedPanel. The TabbedPanel widget manages different widgets in tabs. It consists of a header area for the actual tab buttons and a content area for showing the current tab content. Before you begin implementing this widget you need to understand the concept of a TabbedPanelHeader.
+What is a TabbedPanelHeader? An individual tab is called a TabbedPanelHeader.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>recovery on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/recovery/</link>
+    <description>Recent content in recovery on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Oct 2015 20:53:15 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/recovery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Turn Off Recycle Bin Option Oracle</title>
+      <link>https://karanbalkar.com/posts/turn-off-recycle-bin-option-oracle/</link>
+      <pubDate>Sun, 18 Oct 2015 20:53:15 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/turn-off-recycle-bin-option-oracle/</guid>
+      <description>Hello everyone!
+Starting from Oracle version 10g, a new feature known as RecycleBin was introduced to recover dropped tables. Dropped tables go &#34;into&#34; the recyclebin, and can be restored (undropped) from the recyclebin.
+By default the RECYCLEBIN option is ON. Hence you can recover the tables dropped, by using the FLASHBACK table command as follows!
+Pre-requisites: Oracle database 10g Express Edition with *SQLPlus Open *SQLPlus and run the following commands! DROP TABLE YOURTABLENAME; FLASHBACK TABLE YOURTABLENAME TO BEFORE DROP; Check parameter RECYCLEBIN using the below command</description>
+    </item>
+    
+  </channel>
+</rss>

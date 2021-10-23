@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oracle on Threads Of Life</title>
+    <link>https://karanbalkar.com/categories/oracle/</link>
+    <description>Recent content in Oracle on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Oct 2018 15:20:53 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/categories/oracle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Execute batch file using Oracle Job Scheduler</title>
+      <link>https://karanbalkar.com/posts/execute-batch-file-using-oracle-job-scheduler/</link>
+      <pubDate>Sat, 20 Oct 2018 15:20:53 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/execute-batch-file-using-oracle-job-scheduler/</guid>
+      <description>Hey everyone!
+The Oracle database includes a built-in scheduler that allows scheduling functions and procedures that can be called from any PL/SQL program. The DBMS_SCHEDULER package introduced in Oracle 10g helps to create, run and monitor jobs. In addition, one can also define a job to execute a batch (.bat) file. In order to run an external job, you need to enable and start the OracleJobScheduler service on the database server.</description>
+    </item>
+    
+    <item>
+      <title>Turn Off Recycle Bin Option Oracle</title>
+      <link>https://karanbalkar.com/posts/turn-off-recycle-bin-option-oracle/</link>
+      <pubDate>Sun, 18 Oct 2015 20:53:15 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/turn-off-recycle-bin-option-oracle/</guid>
+      <description>Hello everyone!
+Starting from Oracle version 10g, a new feature known as RecycleBin was introduced to recover dropped tables. Dropped tables go &#34;into&#34; the recyclebin, and can be restored (undropped) from the recyclebin.
+By default the RECYCLEBIN option is ON. Hence you can recover the tables dropped, by using the FLASHBACK table command as follows!
+Pre-requisites: Oracle database 10g Express Edition with *SQLPlus Open *SQLPlus and run the following commands! DROP TABLE YOURTABLENAME; FLASHBACK TABLE YOURTABLENAME TO BEFORE DROP; Check parameter RECYCLEBIN using the below command</description>
+    </item>
+    
+  </channel>
+</rss>

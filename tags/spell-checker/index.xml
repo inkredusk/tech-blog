@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spell checker on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/spell-checker/</link>
+    <description>Recent content in spell checker on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Oct 2017 13:38:30 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/spell-checker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implement Spell Checker Android</title>
+      <link>https://karanbalkar.com/posts/implement-spell-checker-android/</link>
+      <pubDate>Wed, 18 Oct 2017 13:38:30 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/implement-spell-checker-android/</guid>
+      <description>Hi everyone!
+Spell check is of the most common programs used to identify words in a document that may not be spelled correctly. Today, one need not carry a dictionary to self spell check. The age of mobile technology has given rise to a number of applications that incorporate the spell checking functionality. Android offers developers a spelling checker framework. In order to implement the spell checking feature, developers need to make use of the SpellCheckerSessionListener interface.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>http request on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/http-request/</link>
+    <description>Recent content in http request on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Oct 2021 11:20:05 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/http-request/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sending Http Request Using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/sending-http-request-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 11:20:05 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/sending-http-request-using-qt5/</guid>
+      <description>HTTP (Hypertext Transfer Protocol) works as a request-response protocol between a client and server. A web browser may be the client, and an application on a computer that hosts a web site may be the server. For example, a client (browser) submits an HTTP request to the server and then the server returns a response to the client. The response contains status information about the request as well as the requested content.</description>
+    </item>
+    
+  </channel>
+</rss>

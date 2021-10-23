@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Detect and use light and gyroscope sensors in Android - Threads Of Life</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Detect and use light and gyroscope sensors in Android" />
+<meta property="og:description" content="Hello everyone!
+Sensors play a vital role in any electronic device and more importantly help in detecting or measuring a physical property. Nowadays, Android phones come equipped with a range of sensors including light, pressure, temperature, gyroscope, proximity etc. Developers need to build applications using the functionality of these sensors. For that purpose, one needs to learn how to detect and implement the corresponding sensor functionality. Through this post, we will understand how to detect and use the Light and Gyroscope sensors in Android." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karanbalkar.com/posts/detect-use-light-gyroscope-sensors-android/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-19T07:53:34+05:30" />
+<meta property="article:modified_time" content="2021-10-19T07:53:34+05:30" />
+
+
+		<meta itemprop="name" content="Detect and use light and gyroscope sensors in Android">
+<meta itemprop="description" content="Hello everyone!
+Sensors play a vital role in any electronic device and more importantly help in detecting or measuring a physical property. Nowadays, Android phones come equipped with a range of sensors including light, pressure, temperature, gyroscope, proximity etc. Developers need to build applications using the functionality of these sensors. For that purpose, one needs to learn how to detect and implement the corresponding sensor functionality. Through this post, we will understand how to detect and use the Light and Gyroscope sensors in Android."><meta itemprop="datePublished" content="2021-10-19T07:53:34+05:30" />
+<meta itemprop="dateModified" content="2021-10-19T07:53:34+05:30" />
+<meta itemprop="wordCount" content="392">
+<meta itemprop="keywords" content="development,sensors,light and gyroscope,android," />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Threads Of Life" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Threads Of Life</div>
+					<div class="logo__tagline">Start..Pause...Run...but never STOP!</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/speaker-profile/">
+				
+				<span class="menu__text">Speaker Profile</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Detect and use light and gyroscope sensors in Android</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Karan Balkar</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-10-19T07:53:34&#43;05:30">Tuesday, Oct 19, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tech/" rel="category">Tech</a>, <a class="meta__link" href="/categories/android/" rel="category">Android</a>, <a class="meta__link" href="/categories/tips-and-tricks/" rel="category">Tips and tricks</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p>Hello everyone!</p>
+<p align="justify">Sensors play a vital role in any electronic device and more importantly help in detecting or measuring a physical property. Nowadays, Android phones come equipped with a range of sensors including light, pressure, temperature, gyroscope, proximity etc. Developers need to build applications using the functionality of these sensors. For that purpose, one needs to learn how to detect and implement the corresponding sensor functionality. </p>
+<p align="justify">Through this post, we will understand how to detect and use the <strong>Light</strong> and <strong>Gyroscope</strong> sensors in Android. </p>
+<p align="justify"><strong>Pre-requisites</strong>: Eclipse IDE, Android SDK </p>
+<p align="justify"><strong>Step 1</strong>: Create a new Android application project called <strong>AndroidSensorsDemo</strong> with package name <strong>com.example</strong></p>
+<p align="justify"><strong>Step 2</strong>: Create Activity class </p>
+<p align="justify">We will first create an Activity class called <strong>MySensorActivity</strong> in our existing package and add the following code! </p>
+<p><strong>MySensorActivity.java</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.example<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> android.hardware.Sensor<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.hardware.SensorEvent<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.hardware.SensorEventListener<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.hardware.SensorManager<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.os.Build<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.os.Bundle<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.widget.TextView<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.widget.Toast<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.annotation.TargetApi<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.app.Activity<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.content.Context<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.content.pm.PackageManager<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MySensorActivity</span> <span style="color:#66d9ef">extends</span> Activity <span style="color:#66d9ef">implements</span> SensorEventListener <span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">private</span> TextView tv<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">private</span> SensorManager mSensorManager<span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">private</span> Sensor mGyroSensor<span style="color:#f92672">;</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>Bundle savedInstanceState<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>savedInstanceState<span style="color:#f92672">);</span>
+		setContentView<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">activity_main</span><span style="color:#f92672">);</span>
+
+		tv<span style="color:#f92672">=</span> <span style="color:#f92672">(</span>TextView<span style="color:#f92672">)</span>findViewById<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">txt2</span><span style="color:#f92672">);</span>
+		<span style="color:#75715e">// Get an instance of the sensor service
+</span><span style="color:#75715e"></span>		mSensorManager <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>SensorManager<span style="color:#f92672">)</span> getSystemService<span style="color:#f92672">(</span>Context<span style="color:#f92672">.</span><span style="color:#a6e22e">SENSOR_SERVICE</span><span style="color:#f92672">);</span>
+		mGyroSensor<span style="color:#f92672">=</span>mSensorManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getDefaultSensor</span><span style="color:#f92672">(</span>Sensor<span style="color:#f92672">.</span><span style="color:#a6e22e">TYPE_GYROSCOPE</span><span style="color:#f92672">);</span>
+		
+		PackageManager PM<span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getPackageManager</span><span style="color:#f92672">();</span>
+		<span style="color:#66d9ef">boolean</span> gyro <span style="color:#f92672">=</span> PM<span style="color:#f92672">.</span><span style="color:#a6e22e">hasSystemFeature</span><span style="color:#f92672">(</span>PackageManager<span style="color:#f92672">.</span><span style="color:#a6e22e">FEATURE_SENSOR_GYROSCOPE</span><span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">boolean</span> light <span style="color:#f92672">=</span> PM<span style="color:#f92672">.</span><span style="color:#a6e22e">hasSystemFeature</span><span style="color:#f92672">(</span>PackageManager<span style="color:#f92672">.</span><span style="color:#a6e22e">FEATURE_SENSOR_LIGHT</span><span style="color:#f92672">);</span>
+		
+		<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>gyro<span style="color:#f92672">){</span>
+			
+			<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>light<span style="color:#f92672">){</span>
+				Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">makeText</span><span style="color:#f92672">(</span>getApplicationContext<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;Both light and gyroscope sensors are present&#34;</span><span style="color:#f92672">,</span> Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">LENGTH_LONG</span><span style="color:#f92672">).</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+			<span style="color:#f92672">}</span>
+			<span style="color:#66d9ef">else</span>
+				Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">makeText</span><span style="color:#f92672">(</span>getApplicationContext<span style="color:#f92672">(),</span><span style="color:#e6db74">&#34;Only gyroscope sensor is present&#34;</span><span style="color:#f92672">,</span> Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">LENGTH_LONG</span><span style="color:#f92672">).</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+			
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAccuracyChanged</span><span style="color:#f92672">(</span>Sensor sensor<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> accuracy<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// Do something if sensor accuracy changes.
+</span><span style="color:#75715e"></span>	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onSensorChanged</span><span style="color:#f92672">(</span>SensorEvent event<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+		<span style="color:#66d9ef">float</span> angularXSpeed <span style="color:#f92672">=</span> event<span style="color:#f92672">.</span><span style="color:#a6e22e">values</span><span style="color:#f92672">[</span>0<span style="color:#f92672">];</span>
+		tv<span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Angular X speed level is: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">+</span>angularXSpeed<span style="color:#f92672">);</span> 
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onResume</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// Register a listener for the sensor.
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onResume</span><span style="color:#f92672">();</span>
+		mSensorManager<span style="color:#f92672">.</span><span style="color:#a6e22e">registerListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> mGyroSensor<span style="color:#f92672">,</span> SensorManager<span style="color:#f92672">.</span><span style="color:#a6e22e">SENSOR_DELAY_NORMAL</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+	<span style="color:#a6e22e">@Override</span>
+	<span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onPause</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">// important to unregister the sensor when the activity pauses.
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onPause</span><span style="color:#f92672">();</span>
+		mSensorManager<span style="color:#f92672">.</span><span style="color:#a6e22e">unregisterListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>activity_main.xml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;RelativeLayout</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span style="color:#a6e22e">xmlns:tools=</span><span style="color:#e6db74">&#34;http://schemas.android.com/tools&#34;</span>
+    <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+    <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+    <span style="color:#a6e22e">tools:context=</span><span style="color:#e6db74">&#34;.MySensorActivity&#34;</span><span style="color:#f92672">&gt;</span>
+
+    <span style="color:#f92672">&lt;TextView</span>
+        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/txt1&#34;</span>
+        <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        <span style="color:#a6e22e">android:text=</span><span style="color:#e6db74">&#34;@string/hello_world&#34;</span><span style="color:#f92672">/&gt;</span>
+    
+	<span style="color:#f92672">&lt;TextView</span>
+        <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/txt2&#34;</span>
+        <span style="color:#a6e22e">android:layout_below=</span><span style="color:#e6db74">&#34;@+id/txt1&#34;</span>
+        <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+        <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span><span style="color:#f92672">/&gt;</span>    
+
+<span style="color:#f92672">&lt;/RelativeLayout&gt;</span>
+</code></pre></div><p align="justify"><strong>Note</strong>: The above code displays values for a Gyroscope sensor. For using the light sensor, you just need to register the <a href="http://developer.android.com/reference/android/hardware/Sensor.html#TYPE_LIGHT" target="_blank">Light sensor</a> instead of the Gyroscope sensor. The availability of sensors varies from device to device. Try and find out the sensors present in your device. </p>
+<p align="justify">Finally, no changes are to be made to the <strong>AndroidManifest.xml</strong> file. Save and run the application on an Android device and you should the following output! </p>
+<p><img src="/custom/images/android_sensors_demo_1.png" alt="android_sensors_demo_1"></p>
+<p><img src="/custom/images/android_sensors_demo_2.png" alt="android_sensors_demo_2"></p>
+<p align="justify"><strong>Reference</strong>: <a href="http://developer.android.com/guide/topics/sensors/sensors_overview.html" target="_blank">Android Sensors</a></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/development/" rel="tag">development</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/sensors/" rel="tag">sensors</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/light-and-gyroscope/" rel="tag">light and gyroscope</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/android/" rel="tag">android</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Karan Balkar avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Karan Balkar</span>
+	</div>
+	<div class="authorbox__description">
+		Karan Balkar is a mobile application developer primarily working on Android since the past 5 years. He has also worked on Augmented reality / Virtual reality based mobile applications and is passionate about exploring new innovative technologies.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/base64-encoding-decoding-using-qt5/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Base64 encoding and decoding using Qt 5 framework</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/using-redux-toolkit-for-react-applications/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Using Redux Toolkit for React Applications</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "threadsoflifeblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Threads Of Life
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

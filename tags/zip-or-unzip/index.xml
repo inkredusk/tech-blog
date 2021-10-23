@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zip or unzip on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/zip-or-unzip/</link>
+    <description>Recent content in zip or unzip on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Oct 2021 08:38:26 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/zip-or-unzip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zipping and unzipping files using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/zipping-unzipping-files-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 08:38:26 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/zipping-unzipping-files-using-qt5/</guid>
+      <description>Hey everyone!
+Qt provides a QByteArray class that can be used to store raw bytes and traditional 8-bit terminated strings. Moreover, Qt also provides the QString class to store string data. QString is mainly used throughout the Qt API.
+Through this post, we will learn how to zip and unzip files using Qt. We will create a sample text file containing a message as follows,
+demo.txt
+This is a demo to zip and unzip files using Qt framework Pre-requisites: Qt Creator, MinGW compiler for Windows (64 bit)</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/</link>
+    <description>Recent content in Tags on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Oct 2021 21:15:32 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript</title>
+      <link>https://karanbalkar.com/tags/javascript/</link>
+      <pubDate>Fri, 22 Oct 2021 21:15:32 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>voice activation</title>
+      <link>https://karanbalkar.com/tags/voice-activation/</link>
+      <pubDate>Fri, 22 Oct 2021 21:15:32 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/voice-activation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://karanbalkar.com/tags/web/</link>
+      <pubDate>Fri, 22 Oct 2021 21:15:32 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chaos engineering</title>
+      <link>https://karanbalkar.com/tags/chaos-engineering/</link>
+      <pubDate>Fri, 22 Oct 2021 19:15:50 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/chaos-engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jenkins</title>
+      <link>https://karanbalkar.com/tags/jenkins/</link>
+      <pubDate>Fri, 22 Oct 2021 19:15:50 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hooks</title>
+      <link>https://karanbalkar.com/tags/hooks/</link>
+      <pubDate>Fri, 22 Oct 2021 12:27:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/hooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://karanbalkar.com/tags/react/</link>
+      <pubDate>Fri, 22 Oct 2021 12:27:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redux</title>
+      <link>https://karanbalkar.com/tags/redux/</link>
+      <pubDate>Fri, 22 Oct 2021 12:27:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/redux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redux-toolkit</title>
+      <link>https://karanbalkar.com/tags/redux-toolkit/</link>
+      <pubDate>Fri, 22 Oct 2021 12:27:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/redux-toolkit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>state management</title>
+      <link>https://karanbalkar.com/tags/state-management/</link>
+      <pubDate>Fri, 22 Oct 2021 12:27:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/state-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>https://karanbalkar.com/tags/android/</link>
+      <pubDate>Tue, 19 Oct 2021 07:53:34 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://karanbalkar.com/tags/development/</link>
+      <pubDate>Tue, 19 Oct 2021 07:53:34 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>light and gyroscope</title>
+      <link>https://karanbalkar.com/tags/light-and-gyroscope/</link>
+      <pubDate>Tue, 19 Oct 2021 07:53:34 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/light-and-gyroscope/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sensors</title>
+      <link>https://karanbalkar.com/tags/sensors/</link>
+      <pubDate>Tue, 19 Oct 2021 07:53:34 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/sensors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>base64 encoding and decoding</title>
+      <link>https://karanbalkar.com/tags/base64-encoding-and-decoding/</link>
+      <pubDate>Mon, 18 Oct 2021 14:37:49 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/base64-encoding-and-decoding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Qt 5 framework</title>
+      <link>https://karanbalkar.com/tags/qt-5-framework/</link>
+      <pubDate>Mon, 18 Oct 2021 14:37:49 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/qt-5-framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http request</title>
+      <link>https://karanbalkar.com/tags/http-request/</link>
+      <pubDate>Mon, 18 Oct 2021 11:20:05 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/http-request/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>getting started</title>
+      <link>https://karanbalkar.com/tags/getting-started/</link>
+      <pubDate>Mon, 18 Oct 2021 11:03:43 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>json parsing</title>
+      <link>https://karanbalkar.com/tags/json-parsing/</link>
+      <pubDate>Mon, 18 Oct 2021 10:49:10 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/json-parsing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zip or unzip</title>
+      <link>https://karanbalkar.com/tags/zip-or-unzip/</link>
+      <pubDate>Mon, 18 Oct 2021 08:38:26 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/zip-or-unzip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3D model</title>
+      <link>https://karanbalkar.com/tags/3d-model/</link>
+      <pubDate>Sat, 23 Jan 2021 12:13:03 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/3d-model/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>augmented reality</title>
+      <link>https://karanbalkar.com/tags/augmented-reality/</link>
+      <pubDate>Sat, 23 Jan 2021 12:13:03 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/augmented-reality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>threejs</title>
+      <link>https://karanbalkar.com/tags/threejs/</link>
+      <pubDate>Sat, 23 Jan 2021 12:13:03 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/threejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://karanbalkar.com/tags/database/</link>
+      <pubDate>Sat, 20 Oct 2018 15:20:53 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>job scheduler</title>
+      <link>https://karanbalkar.com/tags/job-scheduler/</link>
+      <pubDate>Sat, 20 Oct 2018 15:20:53 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/job-scheduler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle</title>
+      <link>https://karanbalkar.com/tags/oracle/</link>
+      <pubDate>Sat, 20 Oct 2018 15:20:53 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>screen orientation</title>
+      <link>https://karanbalkar.com/tags/screen-orientation/</link>
+      <pubDate>Thu, 18 Oct 2018 17:28:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/screen-orientation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Processing</title>
+      <link>https://karanbalkar.com/tags/processing/</link>
+      <pubDate>Sat, 18 Aug 2018 20:56:34 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spell checker</title>
+      <link>https://karanbalkar.com/tags/spell-checker/</link>
+      <pubDate>Wed, 18 Oct 2017 13:38:30 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/spell-checker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proximity</title>
+      <link>https://karanbalkar.com/tags/proximity/</link>
+      <pubDate>Tue, 17 Oct 2017 13:53:26 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/proximity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data extraction</title>
+      <link>https://karanbalkar.com/tags/data-extraction/</link>
+      <pubDate>Tue, 12 Sep 2017 14:05:01 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/data-extraction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jsoup</title>
+      <link>https://karanbalkar.com/tags/jsoup/</link>
+      <pubDate>Tue, 12 Sep 2017 14:05:01 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/jsoup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>content provider</title>
+      <link>https://karanbalkar.com/tags/content-provider/</link>
+      <pubDate>Sat, 20 May 2017 08:47:31 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/content-provider/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clipboard and textinput</title>
+      <link>https://karanbalkar.com/tags/clipboard-and-textinput/</link>
+      <pubDate>Thu, 19 Nov 2015 08:26:00 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/clipboard-and-textinput/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kivy</title>
+      <link>https://karanbalkar.com/tags/kivy/</link>
+      <pubDate>Thu, 19 Nov 2015 08:26:00 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/kivy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://karanbalkar.com/tags/python/</link>
+      <pubDate>Thu, 19 Nov 2015 08:26:00 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jQuery</title>
+      <link>https://karanbalkar.com/tags/jquery/</link>
+      <pubDate>Mon, 19 Oct 2015 08:17:53 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lightbox</title>
+      <link>https://karanbalkar.com/tags/lightbox/</link>
+      <pubDate>Mon, 19 Oct 2015 08:17:53 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/lightbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>https://karanbalkar.com/tags/ui/</link>
+      <pubDate>Mon, 19 Oct 2015 08:17:53 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recovery</title>
+      <link>https://karanbalkar.com/tags/recovery/</link>
+      <pubDate>Sun, 18 Oct 2015 20:53:15 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/recovery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tabbedpanel</title>
+      <link>https://karanbalkar.com/tags/tabbedpanel/</link>
+      <pubDate>Sun, 18 Oct 2015 15:40:54 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/tabbedpanel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UI Canvas</title>
+      <link>https://karanbalkar.com/tags/ui-canvas/</link>
+      <pubDate>Sun, 18 Oct 2015 15:17:23 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/ui-canvas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>asyncimage</title>
+      <link>https://karanbalkar.com/tags/asyncimage/</link>
+      <pubDate>Sat, 17 Oct 2015 15:24:10 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/asyncimage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>carousel</title>
+      <link>https://karanbalkar.com/tags/carousel/</link>
+      <pubDate>Sat, 17 Oct 2015 15:24:10 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/carousel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UI Accordion</title>
+      <link>https://karanbalkar.com/tags/ui-accordion/</link>
+      <pubDate>Mon, 20 Jul 2015 07:54:39 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/ui-accordion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CI/CD</title>
+      <link>https://karanbalkar.com/tags/ci/cd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

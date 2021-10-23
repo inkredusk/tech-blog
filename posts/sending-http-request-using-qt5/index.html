@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sending Http Request Using Qt 5 framework - Threads Of Life</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Sending Http Request Using Qt 5 framework" />
+<meta property="og:description" content="HTTP (Hypertext Transfer Protocol) works as a request-response protocol between a client and server. A web browser may be the client, and an application on a computer that hosts a web site may be the server. For example, a client (browser) submits an HTTP request to the server and then the server returns a response to the client. The response contains status information about the request as well as the requested content." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karanbalkar.com/posts/sending-http-request-using-qt5/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-18T11:20:05+05:30" />
+<meta property="article:modified_time" content="2021-10-18T11:20:05+05:30" />
+
+
+		<meta itemprop="name" content="Sending Http Request Using Qt 5 framework">
+<meta itemprop="description" content="HTTP (Hypertext Transfer Protocol) works as a request-response protocol between a client and server. A web browser may be the client, and an application on a computer that hosts a web site may be the server. For example, a client (browser) submits an HTTP request to the server and then the server returns a response to the client. The response contains status information about the request as well as the requested content."><meta itemprop="datePublished" content="2021-10-18T11:20:05+05:30" />
+<meta itemprop="dateModified" content="2021-10-18T11:20:05+05:30" />
+<meta itemprop="wordCount" content="416">
+<meta itemprop="keywords" content="development,http request,Qt 5 framework," />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Threads Of Life" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Threads Of Life</div>
+					<div class="logo__tagline">Start..Pause...Run...but never STOP!</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/speaker-profile/">
+				
+				<span class="menu__text">Speaker Profile</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Sending Http Request Using Qt 5 framework</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Karan Balkar</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-10-18T11:20:05&#43;05:30">Monday, Oct 18, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tech/" rel="category">Tech</a>, <a class="meta__link" href="/categories/qt/" rel="category">Qt</a>, <a class="meta__link" href="/categories/tips-and-tricks/" rel="category">Tips and tricks</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p><strong>HTTP</strong> (Hypertext Transfer Protocol) works as a request-response protocol between a client and server. A web browser may be the client, and an application on a computer that hosts a web site may be the server. For example, a client (browser) submits an HTTP request to the server and then the server returns a response to the client. The response contains status information about the request as well as the requested content.</p>
+<p>The two commonly used methods for a request-response between a client and server are: GET and POST.</p>
+<ul>
+<li><strong>GET</strong> - Requests data from a specified resource</li>
+<li><strong>POST</strong> - Submits data to be processed to a specified resource</li>
+</ul>
+<p>The Qt framework provides the <a href="http://qt-project.org/doc/qt-4.8/qnetworkrequest.html#details">QNetworkRequest</a> class as a part of the <em>Network Access API</em> that holds the information necessary to send a request over the network. As mentioned in the official API documentation, it contains a URL and some ancillary information that can be used to modify the request.</p>
+<p>Through this post, we will learn how to send a HTTP <strong>GET</strong> request using the Qt 5 framework!</p>
+<p><strong>Pre-requisites</strong>: Qt Creator (Windows 64 bit), MinGW or VS compiler</p>
+<p>Launch Qt creator IDE and create a new <em>Qt console application</em> project called <strong>HttpGetExample</strong>. Choose the default <em>Desktop</em> kit and leave the <em>Add to Version control</em> option as <strong>None</strong>. Now, let&rsquo;s write the code in our <strong>main.cpp</strong> file as follows!</p>
+<p><strong>main.cpp</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;QCoreApplication&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;QDebug&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;QNetworkAccessManager&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;QNetworkRequest&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;QNetworkReply&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;QUrl&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;QUrlQuery&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendRequest</span>();
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>argv[])
+{
+    QCoreApplication a(argc, argv);
+    sendRequest();
+    <span style="color:#66d9ef">return</span> a.exec();
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendRequest</span>(){
+
+    <span style="color:#75715e">// create custom temporary event loop on stack
+</span><span style="color:#75715e"></span>    QEventLoop eventLoop;
+
+    <span style="color:#75715e">// &#34;quit()&#34; the event-loop, when the network request &#34;finished()&#34;
+</span><span style="color:#75715e"></span>    QNetworkAccessManager mgr;
+    QObject<span style="color:#f92672">::</span>connect(<span style="color:#f92672">&amp;</span>mgr, SIGNAL(finished(QNetworkReply<span style="color:#f92672">*</span>)), <span style="color:#f92672">&amp;</span>eventLoop, SLOT(quit()));
+
+    <span style="color:#75715e">// the HTTP request
+</span><span style="color:#75715e"></span>    QNetworkRequest req( QUrl( QString(<span style="color:#e6db74">&#34;http://ip.jsontest.com/&#34;</span>) ) );
+    QNetworkReply <span style="color:#f92672">*</span>reply <span style="color:#f92672">=</span> mgr.get(req);
+    eventLoop.exec(); <span style="color:#75715e">// blocks stack until &#34;finished()&#34; has been called
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">if</span> (reply<span style="color:#f92672">-&gt;</span>error() <span style="color:#f92672">==</span> QNetworkReply<span style="color:#f92672">::</span>NoError) {
+        <span style="color:#75715e">//success
+</span><span style="color:#75715e"></span>        qDebug() <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Success&#34;</span> <span style="color:#f92672">&lt;&lt;</span>reply<span style="color:#f92672">-&gt;</span>readAll();
+        <span style="color:#66d9ef">delete</span> reply;
+    }
+    <span style="color:#66d9ef">else</span> {
+        <span style="color:#75715e">//failure
+</span><span style="color:#75715e"></span>        qDebug() <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Failure&#34;</span> <span style="color:#f92672">&lt;&lt;</span>reply<span style="color:#f92672">-&gt;</span>errorString();
+        <span style="color:#66d9ef">delete</span> reply;
+    }
+}
+</code></pre></div><p>You also need to make changes to the <strong>Project</strong> (.pro) file and add assign the corresponding values to variables.</p>
+<p><strong>.pro file</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">QT <span style="color:#f92672">+=</span> core
+
+QT <span style="color:#f92672">-=</span> gui
+
+TARGET <span style="color:#f92672">=</span> HttpGetExample
+CONFIG   <span style="color:#f92672">+=</span> console
+CONFIG   <span style="color:#f92672">-=</span> app_bundle
+QT <span style="color:#f92672">+=</span> network
+TEMPLATE <span style="color:#f92672">=</span> app
+
+SOURCES <span style="color:#f92672">+=</span> main<span style="color:#f92672">.</span><span style="color:#a6e22e">cpp</span>
+</code></pre></div><p>Save all changes. Build and run the application. If no errors are present, then you should see the response of the HTTP request displayed in the console! :)</p>
+<p><img src="/custom/images/qt_http_get_request.png" alt="qt-http-get-output"></p>
+<p>That&rsquo;s it for this small tip on Qt. Stay tuned for more! :)</p>
+<p><strong>Reference</strong>: <a href="http://peter.hartmann.tk/blog/2012/02/inside-the-qt-http-stack.html">Inside the Qt HTTP stack</a></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/development/" rel="tag">development</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/http-request/" rel="tag">http request</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/qt-5-framework/" rel="tag">Qt 5 framework</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Karan Balkar avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Karan Balkar</span>
+	</div>
+	<div class="authorbox__description">
+		Karan Balkar is a mobile application developer primarily working on Android since the past 5 years. He has also worked on Augmented reality / Virtual reality based mobile applications and is passionate about exploring new innovative technologies.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/getting-started-with-qt/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Getting Started With Qt</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/base64-encoding-decoding-using-qt5/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Base64 encoding and decoding using Qt 5 framework</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "threadsoflifeblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Threads Of Life
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

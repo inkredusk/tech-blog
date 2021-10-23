@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>content provider on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/content-provider/</link>
+    <description>Recent content in content provider on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 May 2017 08:47:31 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/content-provider/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implement Content Provider in Android</title>
+      <link>https://karanbalkar.com/posts/implement-content-provider-in-android/</link>
+      <pubDate>Sat, 20 May 2017 08:47:31 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/implement-content-provider-in-android/</guid>
+      <description>Hey everyone!
+As developers, we often need to create applications that can share data with other applications residing on the Android device. A content provider is similar to a database where one can query it, edit its content, as well as add or delete content using insert, update, delete, and query methods. As mentioned on the developer&#39;s page, Content providers manage access to a structured set of data. They encapsulate the data, and provide mechanisms for defining data security.</description>
+    </item>
+    
+  </channel>
+</rss>

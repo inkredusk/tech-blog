@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>carousel on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/carousel/</link>
+    <description>Recent content in carousel on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Oct 2015 15:24:10 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/carousel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Kivy : Carousel and AsyncImage</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-carousel-and-asyncimage/</link>
+      <pubDate>Sat, 17 Oct 2015 15:24:10 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-carousel-and-asyncimage/</guid>
+      <description>Hello everyone!
+Today I will talk about two interesting Widgets of the Kivy framework. Both these widgets can be used to display/load images in a particular manner.
+1. Carousel
+As mentioned in the Kivy docs, the Carousel widget provides a mobile-friendly carousel view where one can swipe between slides. One can add any content to the carousel and use it horizontally or vertically. The carousel can display pages in loop. One can also navigate to the next slide or the previous slide using the Carousel properties.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>base64 encoding and decoding on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/base64-encoding-and-decoding/</link>
+    <description>Recent content in base64 encoding and decoding on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Oct 2021 14:37:49 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/base64-encoding-and-decoding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Base64 encoding and decoding using Qt 5 framework</title>
+      <link>https://karanbalkar.com/posts/base64-encoding-decoding-using-qt5/</link>
+      <pubDate>Mon, 18 Oct 2021 14:37:49 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/base64-encoding-decoding-using-qt5/</guid>
+      <description>Hi everyone!
+In one of my previous posts, we had learnt how to configure and setup Qt for Windows. Base64 is basically a method using which we can encode binary data into a character set in order to transmit the data without any loss or modification of the contents. It is a group of similar binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation.</description>
+    </item>
+    
+  </channel>
+</rss>

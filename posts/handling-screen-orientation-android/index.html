@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Handling Screen Orientation Android - Threads Of Life</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Handling Screen Orientation Android" />
+<meta property="og:description" content="It is observed that when device configurations including screen orientation, keyboard availability etc change, Android restarts the current Activity. This is done to enable the application to adapt to the new configuration.
+In order to declare an Activity that handles configuration changes we must add the android:configChanges attribute with a value that represents the configuration we want to handle, in our AndroidManifest.xml file. There are basically two ways to handle screen orientation in Android." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karanbalkar.com/posts/handling-screen-orientation-android/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-10-18T17:28:21+05:30" />
+<meta property="article:modified_time" content="2018-10-18T17:28:21+05:30" />
+
+
+		<meta itemprop="name" content="Handling Screen Orientation Android">
+<meta itemprop="description" content="It is observed that when device configurations including screen orientation, keyboard availability etc change, Android restarts the current Activity. This is done to enable the application to adapt to the new configuration.
+In order to declare an Activity that handles configuration changes we must add the android:configChanges attribute with a value that represents the configuration we want to handle, in our AndroidManifest.xml file. There are basically two ways to handle screen orientation in Android."><meta itemprop="datePublished" content="2018-10-18T17:28:21+05:30" />
+<meta itemprop="dateModified" content="2018-10-18T17:28:21+05:30" />
+<meta itemprop="wordCount" content="477">
+<meta itemprop="keywords" content="development,screen orientation,android," />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Threads Of Life" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Threads Of Life</div>
+					<div class="logo__tagline">Start..Pause...Run...but never STOP!</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/speaker-profile/">
+				
+				<span class="menu__text">Speaker Profile</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Handling Screen Orientation Android</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Karan Balkar</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-10-18T17:28:21&#43;05:30">Thursday, Oct 18, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tech/" rel="category">Tech</a>, <a class="meta__link" href="/categories/android/" rel="category">Android</a>, <a class="meta__link" href="/categories/tips-and-tricks/" rel="category">Tips and tricks</a>
+	</span>
+</div></div>
+		</header>
+		<div class="content post__content clearfix">
+			<p align="justify">It is observed that when device configurations including screen orientation, keyboard availability etc change, Android restarts the current <strong>Activity</strong>. This is done to enable the application to adapt to the new configuration.</p>
+<p align="justify">In order to declare an Activity that handles configuration changes we must add the <strong>android:configChanges</strong> attribute with a value that represents the configuration we want to handle, in our <strong>AndroidManifest.xml</strong> file. There are basically two ways to handle screen orientation in Android. They are as follows!</p>
+<p>From the <a href="https://developer.android.com/guide/topics/resources/runtime-changes">Android developer&rsquo;s page</a>,</p>
+<p><strong>1. Retain an object during a configuration change</strong></p>
+<p>Allow your activity to restart when a configuration changes, but carry a stateful Object to the new instance of your activity.</p>
+<p><strong>2. Handle the configuration change yourself</strong></p>
+<p align="justify">Prevent the system from restarting your activity during certain configuration changes, but receive a callback when the configurations do change, so that you can manually update your activity as necessary. </p>
+<p align="justify">Now, we will see how to handle screen orientation changes through Java code. Even if you don't have an Android device you can still check landscape and portrait mode for your application by using shortcut key combination of <em>Ctrl + F12</em> for changing landscape to portrait mode in emulator.</p>
+<p align="justify"><strong>Pre-requisites</strong>: Eclipse IDE (preferably latest version), Android SDK (tested it on Android 2.3.3, API level 10) </p>
+<p align="justify"><strong>Programmatically set screen orientation in Android</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#75715e">//set screen orientation of activity (landscape)
+</span><span style="color:#75715e"></span> setRequestedOrientation<span style="color:#f92672">(</span>ActivityInfo<span style="color:#f92672">.</span><span style="color:#a6e22e">SCREEN_ORIENTATION_LANDSCAPE</span><span style="color:#f92672">);</span>
+
+ <span style="color:#75715e">//set screen orientation of activity (portrait)
+</span><span style="color:#75715e"></span> setRequestedOrientation<span style="color:#f92672">(</span>ActivityInfo<span style="color:#f92672">.</span><span style="color:#a6e22e">SCREEN_ORIENTATION_PORTRAIT</span><span style="color:#f92672">);</span>
+</code></pre></div><p align="justify"><strong>Get the current screen orientation</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Display display <span style="color:#f92672">=</span> <span style="color:#f92672">((</span>WindowManager<span style="color:#f92672">)</span> getSystemService<span style="color:#f92672">(</span>WINDOW_SERVICE <span style="color:#a6e22e">getDefaultDisplay</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">int</span> orientation <span style="color:#f92672">=</span> display<span style="color:#f92672">.</span><span style="color:#a6e22e">getOrientation</span><span style="color:#f92672">();</span> 
+<span style="color:#66d9ef">switch</span><span style="color:#f92672">(</span>orientation<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">case</span> Configuration<span style="color:#f92672">.</span><span style="color:#a6e22e">ORIENTATION_PORTRAIT</span><span style="color:#f92672">:</span>
+    setRequestedOrientation <span style="color:#f92672">(</span>ActivityInfo<span style="color:#f92672">.</span><span style="color:#a6e22e">SCREEN_ORIENTATION_LANDSCAPE</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">case</span> Configuration<span style="color:#f92672">.</span><span style="color:#a6e22e">ORIENTATION_LANDSCAPE</span><span style="color:#f92672">:</span>
+    setRequestedOrientation <span style="color:#f92672">(</span>ActivityInfo<span style="color:#f92672">.</span><span style="color:#a6e22e">SCREEN_ORIENTATION_PORTRAIT</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>               	
+<span style="color:#f92672">}</span>
+</code></pre></div><p align="justify">Now, create a new Java class in any of your existing Android projects named <strong>OrientationActivity</strong> and add the following code! </p>
+<p><strong>OrientationActivity.java</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> android.os.Bundle<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.app.Activity<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.content.res.Configuration<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> android.widget.Toast<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OrientationActivity</span> <span style="color:#66d9ef">extends</span> Activity 
+<span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>Bundle savedInstanceState<span style="color:#f92672">)</span>  
+    <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onCreate</span><span style="color:#f92672">(</span>savedInstanceState<span style="color:#f92672">);</span>
+        setContentView<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">orient_main</span><span style="color:#f92672">);</span>
+             
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#75715e">//detect orientation change
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onConfigurationChanged</span><span style="color:#f92672">(</span>Configuration newConfig<span style="color:#f92672">)</span>
+    <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">onConfigurationChanged</span><span style="color:#f92672">(</span>newConfig<span style="color:#f92672">);</span>
+
+        <span style="color:#75715e">//Checks the orientation of the screen
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>newConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">orientation</span> <span style="color:#f92672">==</span> Configuration<span style="color:#f92672">.</span><span style="color:#a6e22e">ORIENTATION_LANDSCAPE</span><span style="color:#f92672">)</span> 
+        <span style="color:#f92672">{</span>
+            Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">makeText</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;In landscape mode&#34;</span><span style="color:#f92672">,</span> Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">LENGTH_SHORT</span><span style="color:#f92672">).</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>newConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">orientation</span> <span style="color:#f92672">==</span> Configuration<span style="color:#f92672">.</span><span style="color:#a6e22e">ORIENTATION_PORTRAIT</span><span style="color:#f92672">)</span>
+        <span style="color:#f92672">{</span>
+            Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">makeText</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;In portrait mode&#34;</span><span style="color:#f92672">,</span> Toast<span style="color:#f92672">.</span><span style="color:#a6e22e">LENGTH_SHORT</span><span style="color:#f92672">).</span><span style="color:#a6e22e">show</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>orient_main.xml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;RelativeLayout</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+    <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;match_parent&#34;</span>
+    <span style="color:#a6e22e">android:orientation=</span><span style="color:#e6db74">&#34;vertical&#34;</span><span style="color:#f92672">&gt;</span>
+    
+    <span style="color:#f92672">&lt;Button</span>
+      <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/btn1&#34;</span>
+      <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+      <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;wrap_content&#34;</span>
+      <span style="color:#a6e22e">android:layout_centerInParent=</span><span style="color:#e6db74">&#34;true&#34;</span>
+      <span style="color:#a6e22e">android:text=</span><span style="color:#e6db74">&#34;Test button&#34;</span><span style="color:#f92672">/&gt;</span>
+    
+<span style="color:#f92672">&lt;/RelativeLayout&gt;</span>
+</code></pre></div><p><strong>AndroidManifest.xml</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;manifest</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span style="color:#a6e22e">package=</span><span style="color:#e6db74">&#34;com.example&#34;</span>
+    <span style="color:#a6e22e">android:versionCode=</span><span style="color:#e6db74">&#34;1&#34;</span>
+    <span style="color:#a6e22e">android:versionName=</span><span style="color:#e6db74">&#34;1.0&#34;</span><span style="color:#f92672">&gt;</span>
+
+    <span style="color:#f92672">&lt;uses-sdk</span>
+        <span style="color:#a6e22e">android:minSdkVersion=</span><span style="color:#e6db74">&#34;8&#34;</span>
+        <span style="color:#a6e22e">android:targetSdkVersion=</span><span style="color:#e6db74">&#34;10&#34;</span> <span style="color:#f92672">/&gt;</span>
+
+    <span style="color:#f92672">&lt;application</span>
+        <span style="color:#a6e22e">android:allowBackup=</span><span style="color:#e6db74">&#34;true&#34;</span>
+        <span style="color:#a6e22e">android:icon=</span><span style="color:#e6db74">&#34;@drawable/ic_launcher&#34;</span>
+        <span style="color:#a6e22e">android:label=</span><span style="color:#e6db74">&#34;@string/app_name&#34;</span>
+        <span style="color:#a6e22e">android:theme=</span><span style="color:#e6db74">&#34;@style/AppTheme&#34;</span> <span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;activity</span>
+            <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;com.example.OrientationActivity&#34;</span>
+            <span style="color:#a6e22e">android:configChanges=</span><span style="color:#e6db74">&#34;orientation|keyboardHidden&#34;</span>
+            <span style="color:#a6e22e">android:label=</span><span style="color:#e6db74">&#34;@string/app_name&#34;</span> <span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;intent-filter&gt;</span>
+                <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.MAIN&#34;</span> <span style="color:#f92672">/&gt;</span>
+                <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.LAUNCHER&#34;</span> <span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;/intent-filter&gt;</span>
+        <span style="color:#f92672">&lt;/activity&gt;</span>
+    <span style="color:#f92672">&lt;/application&gt;</span>
+
+<span style="color:#f92672">&lt;/manifest&gt;</span>
+</code></pre></div><p align="justify">Run the project. Make sure no errors are present. You should see the following output on orientation change! </p>
+<p><img src="/custom/images/android_screen_orientation_landscape.png" alt="android_screen_orientation_landscape"></p>
+<p><img src="/custom/images/android_screen_orientation_portrait.png" alt="android_screen_orientation_portrait"></p>
+<p align="justify"><strong>Note</strong>: Beginning with <strong>Android 3.2</strong> (API level 13), the <em>screen size</em> also changes when the device switches between portrait and landscape orientation. </p>
+<p align="justify">If you want to prevent runtime restarts due to orientation change when developing for API level 13 or higher (as declared by the minSdkVersion and targetSdkVersion attributes), you must include the <em>screenSize</em> value in addition to the <em>orientation</em> value. </p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/development/" rel="tag">development</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/screen-orientation/" rel="tag">screen orientation</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/android/" rel="tag">android</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Karan Balkar avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Karan Balkar</span>
+	</div>
+	<div class="authorbox__description">
+		Karan Balkar is a mobile application developer primarily working on Android since the past 5 years. He has also worked on Augmented reality / Virtual reality based mobile applications and is passionate about exploring new innovative technologies.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/processing-for-android/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Processing for Android</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/execute-batch-file-using-oracle-job-scheduler/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Execute batch file using Oracle Job Scheduler</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "threadsoflifeblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Threads Of Life
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

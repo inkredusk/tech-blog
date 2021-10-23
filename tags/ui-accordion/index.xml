@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UI Accordion on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/ui-accordion/</link>
+    <description>Recent content in UI Accordion on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Jul 2015 07:54:39 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/ui-accordion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Kivy : Accordion</title>
+      <link>https://karanbalkar.com/posts/learning-kivy-accordion/</link>
+      <pubDate>Mon, 20 Jul 2015 07:54:39 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/learning-kivy-accordion/</guid>
+      <description>Hey everyone!
+Working on Kivy has been an amazing learning experience. Kivy has made user interface development a lot easier. Today, I will talk about Accordion, one of the interesting widgets that Kivy has to offer to developers out there.
+What is an Accordion ?
+Accordion is basically a Widget in the form of a menu where in the options are stacked either horizontally or vertically. An Accordion will contain one or many AccordionItem instances such that each item when touched opens up displaying it&#39;s underlying content.</description>
+    </item>
+    
+  </channel>
+</rss>
