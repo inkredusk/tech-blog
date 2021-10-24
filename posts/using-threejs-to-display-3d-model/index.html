@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Using Threejs to Display 3d Model - Threads Of Life</title>
+	<title>Using Threejs to Display 3D Model - Threads Of Life</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Using Threejs to Display 3d Model" />
+		<meta property="og:title" content="Using Threejs to Display 3D Model" />
 <meta property="og:description" content="Hi everyone!
 Three.js is a popular JavaScript library used to display 3D graphics in a web browser using WebGL. It is especially useful when developing AR/VR based applications.
 A simple implementation could involve rendering a 3D model on the browser. Three.js provides a base class Loader through which developers can load 3D models depending upon the type of the model. The .obj file format is one of the most common formats for 3D models." />
@@ -17,13 +17,13 @@ A simple implementation could involve rendering a 3D model on the browser. Three
 <meta property="article:modified_time" content="2021-01-23T12:13:03+05:30" />
 
 
-		<meta itemprop="name" content="Using Threejs to Display 3d Model">
+		<meta itemprop="name" content="Using Threejs to Display 3D Model">
 <meta itemprop="description" content="Hi everyone!
 Three.js is a popular JavaScript library used to display 3D graphics in a web browser using WebGL. It is especially useful when developing AR/VR based applications.
 A simple implementation could involve rendering a 3D model on the browser. Three.js provides a base class Loader through which developers can load 3D models depending upon the type of the model. The .obj file format is one of the most common formats for 3D models."><meta itemprop="datePublished" content="2021-01-23T12:13:03+05:30" />
 <meta itemprop="dateModified" content="2021-01-23T12:13:03+05:30" />
-<meta itemprop="wordCount" content="471">
-<meta itemprop="keywords" content="threejs,augmented reality,3D model,javascript," />
+<meta itemprop="wordCount" content="474">
+<meta itemprop="keywords" content="threejs,nodejs,augmented reality,3D model,javascript," />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -93,7 +93,7 @@ A simple implementation could involve rendering a 3D model on the browser. Three
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Using Threejs to Display 3d Model</h1>
+			<h1 class="post__title">Using Threejs to Display 3D Model</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
 	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Karan Balkar</span>
 </div>
@@ -124,7 +124,7 @@ A simple implementation could involve rendering a 3D model on the browser. Three
 fbx) using Three.js.</p>
 <h4 id="create-new-nodejs-based-app-and-add-dependencies">Create new Node.js based app and add dependencies</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm init threejs_node_javascript
-npm install three three-fbx-loader
+npm install three three-fbx-loader --save
 </code></pre></div><h4 id="create-a-simple-html-page-to-load-the-scripts">Create a simple HTML page to load the scripts</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#f92672">&lt;!</span><span style="color:#a6e22e">DOCTYPE</span> <span style="color:#a6e22e">html</span><span style="color:#f92672">&gt;</span>
 &lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
@@ -224,8 +224,8 @@ npm install three three-fbx-loader
 <p><img src="/custom/images/threejs-display-3d-model-1.gif" alt="threejs-display-3d-model-1"></p>
 <p>After rotating the model</p>
 <p><img src="/custom/images/threejs-display-3d-model-2.gif" alt="threejs-display-3d-model-2"></p>
-<p>In this way, one could load a simple 3D model and manipulate it based on what action needs to be done. In addition, there are many different <em>loaders</em> available that one can use. Here is a <a href="https://stemkoski.github.io/Three.js/">link</a> that contains more examples using Three.js</p>
-<p>Hope this post was useful. Stay tuned for more! 😄</p>
+<p>In this way, one could load a simple 3D model and manipulate it based on what action needs to be done. In addition, there are many different <em>loaders</em> available that one can use. Here is a <a href="https://stemkoski.github.io/Three.js/">link</a> that contains more examples using Three.js.</p>
+<p>Hope this post was useful to you. Stay tuned for more! 😄</p>
 
 		</div>
 		<footer class="post__footer">
@@ -235,6 +235,9 @@ npm install three three-fbx-loader
 	<ul class="tags__list">
 		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/threejs/" rel="tag">threejs</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/nodejs/" rel="tag">nodejs</a>
 		</li>
 		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/augmented-reality/" rel="tag">augmented reality</a>
