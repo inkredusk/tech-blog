@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wifi on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/wifi/</link>
+    <description>Recent content in wifi on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Jul 2017 10:49:50 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Display list of WiFi Networks in Android</title>
+      <link>https://karanbalkar.com/posts/display-list-of-wifi-networks-android/</link>
+      <pubDate>Wed, 26 Jul 2017 10:49:50 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/display-list-of-wifi-networks-android/</guid>
+      <description>Hello everyone!
+Android provides the WiFiManager class for managing all aspects of WiFi connectivity. It is used to to define the names of various Intent actions that are broadcast upon any sort of change in WiFi state. Through this post, we will learn how to display a list of available WiFi networks to which an Android device can be connected. The list can be viewed and updated, and attributes of individual entries can be modified.</description>
+    </item>
+    
+  </channel>
+</rss>

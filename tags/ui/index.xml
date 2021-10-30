@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ui on Threads Of Life</title>
+    <title>UI on Threads Of Life</title>
     <link>https://karanbalkar.com/tags/ui/</link>
-    <description>Recent content in ui on Threads Of Life</description>
+    <description>Recent content in UI on Threads Of Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2015 08:17:53 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Oct 2016 10:38:00 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/ui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Display circular ProgressBar in Android</title>
+      <link>https://karanbalkar.com/posts/display-circular-progress-bar-android/</link>
+      <pubDate>Sun, 30 Oct 2016 10:38:00 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/display-circular-progress-bar-android/</guid>
+      <description>Hello friends!
+In the past we have discussed about creating and displaying a basic ProgressBar in Android. A ProgressBar, as the name suggests is basically used to indicate the progress of an operation. By default the progress bar is a spinning wheel (an indeterminate indicator). However, one can also create a circular ProgressBar by applying certain custom attributes. More such styles can be found over here.
+In order to create a circular progress bar we need to add a new XML file in the drawable folder.</description>
+    </item>
+    
     <item>
       <title>Implement Lightbox using jQuery plugin</title>
       <link>https://karanbalkar.com/posts/implement-lightbox-using-jquery-plugin/</link>
@@ -16,6 +27,16 @@
       <description>Hi guys!
 Lightbox is a well-known JavaScript technique used to display images or any web content using modal dialogs. Not too long ago, the lightbox plugin was written in jQuery that allowed developers to modify the code and come up with new plugins that carry out the same task.
 Colorbox is one such jQuery plugin that we can use to implement a lightbox. Through this post, I will try to implement a sample HTML page that displays a lightbox using the Colorbox plugin.</description>
+    </item>
+    
+    <item>
+      <title>Display ProgressBar in Android</title>
+      <link>https://karanbalkar.com/posts/display-progress-bar-android/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/display-progress-bar-android/</guid>
+      <description>Hey everyone!
+A ProgressBar is basically a visual indicator of progress in some operation. Implementing a ProgressBar helps in the understanding of processes running on threads separate from the main User Interface (UI) and the communication between threads. As mentioned on the Android developer&#39;s page, a progress bar can also be made indeterminate. In indeterminate mode, the progress bar shows a cyclic animation without an indication of progress. This mode is used by applications when the length of the task is unknown.</description>
     </item>
     
   </channel>

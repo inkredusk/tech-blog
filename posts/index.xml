@@ -190,6 +190,16 @@ As Android developers, we often need to call web services in order to fetch data
     </item>
     
     <item>
+      <title>Display list of WiFi Networks in Android</title>
+      <link>https://karanbalkar.com/posts/display-list-of-wifi-networks-android/</link>
+      <pubDate>Wed, 26 Jul 2017 10:49:50 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/display-list-of-wifi-networks-android/</guid>
+      <description>Hello everyone!
+Android provides the WiFiManager class for managing all aspects of WiFi connectivity. It is used to to define the names of various Intent actions that are broadcast upon any sort of change in WiFi state. Through this post, we will learn how to display a list of available WiFi networks to which an Android device can be connected. The list can be viewed and updated, and attributes of individual entries can be modified.</description>
+    </item>
+    
+    <item>
       <title>Implement Content Provider in Android</title>
       <link>https://karanbalkar.com/posts/implement-content-provider-in-android/</link>
       <pubDate>Sat, 20 May 2017 08:47:31 +0530</pubDate>
@@ -197,6 +207,17 @@ As Android developers, we often need to call web services in order to fetch data
       <guid>https://karanbalkar.com/posts/implement-content-provider-in-android/</guid>
       <description>Hey everyone!
 As developers, we often need to create applications that can share data with other applications residing on the Android device. A content provider is similar to a database where one can query it, edit its content, as well as add or delete content using insert, update, delete, and query methods. As mentioned on the developer&#39;s page, Content providers manage access to a structured set of data. They encapsulate the data, and provide mechanisms for defining data security.</description>
+    </item>
+    
+    <item>
+      <title>Display circular ProgressBar in Android</title>
+      <link>https://karanbalkar.com/posts/display-circular-progress-bar-android/</link>
+      <pubDate>Sun, 30 Oct 2016 10:38:00 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/display-circular-progress-bar-android/</guid>
+      <description>Hello friends!
+In the past we have discussed about creating and displaying a basic ProgressBar in Android. A ProgressBar, as the name suggests is basically used to indicate the progress of an operation. By default the progress bar is a spinning wheel (an indeterminate indicator). However, one can also create a circular ProgressBar by applying certain custom attributes. More such styles can be found over here.
+In order to create a circular progress bar we need to add a new XML file in the drawable folder.</description>
     </item>
     
     <item>
@@ -287,6 +308,16 @@ Accordion is basically a Widget in the form of a menu where in the options are s
       <description>Kivy is a popular cross platform open source library for developing applications involving different user interfaces. Currently, Kivy runs on Linux, Windows, Mac OSX, Android and iOS.
 Let&amp;rsquo;s start by downloading Kivy for Windows  from here : Kivy for Windows. Unzip the downloaded file to find the kivy.bat file shown below:
 Copy the path to this folder. Now right click My Computer -&amp;gt; Properties -&amp;gt; Advanced System Settings -&amp;gt; Environment Variables Select Path  under System variables and click on Edit.</description>
+    </item>
+    
+    <item>
+      <title>Display ProgressBar in Android</title>
+      <link>https://karanbalkar.com/posts/display-progress-bar-android/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/display-progress-bar-android/</guid>
+      <description>Hey everyone!
+A ProgressBar is basically a visual indicator of progress in some operation. Implementing a ProgressBar helps in the understanding of processes running on threads separate from the main User Interface (UI) and the communication between threads. As mentioned on the Android developer&#39;s page, a progress bar can also be made indeterminate. In indeterminate mode, the progress bar shows a cyclic animation without an indication of progress. This mode is used by applications when the length of the task is unknown.</description>
     </item>
     
   </channel>

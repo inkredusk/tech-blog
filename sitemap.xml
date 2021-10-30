@@ -206,11 +206,32 @@
     <loc>https://karanbalkar.com/posts/using-jsoup-on-android/</loc>
     <lastmod>2017-09-12T14:05:01+05:30</lastmod>
   </url><url>
+    <loc>https://karanbalkar.com/posts/display-list-of-wifi-networks-android/</loc>
+    <lastmod>2017-07-26T10:49:50+05:30</lastmod>
+  </url><url>
+    <loc>https://karanbalkar.com/tags/networking/</loc>
+    <lastmod>2017-07-26T10:49:50+05:30</lastmod>
+  </url><url>
+    <loc>https://karanbalkar.com/tags/wifi/</loc>
+    <lastmod>2017-07-26T10:49:50+05:30</lastmod>
+  </url><url>
     <loc>https://karanbalkar.com/tags/content-provider/</loc>
     <lastmod>2017-05-20T08:47:31+05:30</lastmod>
   </url><url>
     <loc>https://karanbalkar.com/posts/implement-content-provider-in-android/</loc>
     <lastmod>2017-05-20T08:47:31+05:30</lastmod>
+  </url><url>
+    <loc>https://karanbalkar.com/tags/circular/</loc>
+    <lastmod>2016-10-30T10:38:00+05:30</lastmod>
+  </url><url>
+    <loc>https://karanbalkar.com/posts/display-circular-progress-bar-android/</loc>
+    <lastmod>2016-10-30T10:38:00+05:30</lastmod>
+  </url><url>
+    <loc>https://karanbalkar.com/tags/progressbar/</loc>
+    <lastmod>2016-10-30T10:38:00+05:30</lastmod>
+  </url><url>
+    <loc>https://karanbalkar.com/tags/ui/</loc>
+    <lastmod>2016-10-30T10:38:00+05:30</lastmod>
   </url><url>
     <loc>https://karanbalkar.com/tags/clipboard-and-textinput/</loc>
     <lastmod>2015-11-19T08:26:00+05:30</lastmod>
@@ -237,9 +258,6 @@
     <lastmod>2015-10-19T08:17:53+05:30</lastmod>
   </url><url>
     <loc>https://karanbalkar.com/tags/lightbox/</loc>
-    <lastmod>2015-10-19T08:17:53+05:30</lastmod>
-  </url><url>
-    <loc>https://karanbalkar.com/tags/ui/</loc>
     <lastmod>2015-10-19T08:17:53+05:30</lastmod>
   </url><url>
     <loc>https://karanbalkar.com/tags/recovery/</loc>
@@ -279,5 +297,7 @@
     <lastmod>2015-02-20T09:00:49+05:30</lastmod>
   </url><url>
     <loc>https://karanbalkar.com/tags/ci/cd/</loc>
+  </url><url>
+    <loc>https://karanbalkar.com/posts/display-progress-bar-android/</loc>
   </url>
 </urlset>

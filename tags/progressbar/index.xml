@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>progressbar on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/progressbar/</link>
+    <description>Recent content in progressbar on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Oct 2016 10:38:00 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/progressbar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Display circular ProgressBar in Android</title>
+      <link>https://karanbalkar.com/posts/display-circular-progress-bar-android/</link>
+      <pubDate>Sun, 30 Oct 2016 10:38:00 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/display-circular-progress-bar-android/</guid>
+      <description>Hello friends!
+In the past we have discussed about creating and displaying a basic ProgressBar in Android. A ProgressBar, as the name suggests is basically used to indicate the progress of an operation. By default the progress bar is a spinning wheel (an indeterminate indicator). However, one can also create a circular ProgressBar by applying certain custom attributes. More such styles can be found over here.
+In order to create a circular progress bar we need to add a new XML file in the drawable folder.</description>
+    </item>
+    
+    <item>
+      <title>Display ProgressBar in Android</title>
+      <link>https://karanbalkar.com/posts/display-progress-bar-android/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/display-progress-bar-android/</guid>
+      <description>Hey everyone!
+A ProgressBar is basically a visual indicator of progress in some operation. Implementing a ProgressBar helps in the understanding of processes running on threads separate from the main User Interface (UI) and the communication between threads. As mentioned on the Android developer&#39;s page, a progress bar can also be made indeterminate. In indeterminate mode, the progress bar shows a cyclic animation without an indication of progress. This mode is used by applications when the length of the task is unknown.</description>
+    </item>
+    
+  </channel>
+</rss>
