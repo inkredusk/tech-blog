@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Svelte on Threads Of Life</title>
+    <link>https://karanbalkar.com/categories/svelte/</link>
+    <description>Recent content in Svelte on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Nov 2021 10:33:33 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/categories/svelte/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting started with Svelte</title>
+      <link>https://karanbalkar.com/posts/getting-started-with-svelte/</link>
+      <pubDate>Tue, 16 Nov 2021 10:33:33 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/getting-started-with-svelte/</guid>
+      <description>Hey everyone!
+I recently started using Svelte and it&#39;s quite amazing. The good part about Svelte is that it is a compiler and has no additional framework dependencies. The only dependencies are the devDependencies, that&#39;s it. Hence, the result is a light-weight performant app with a significantly smaller bundle size (thanks to those rollup plugins). Moreover, Svelte ensures that everything happens during the compile or the build time rather than on the browser at runtime.</description>
+    </item>
+    
+  </channel>
+</rss>

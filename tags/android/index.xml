@@ -39,6 +39,16 @@ Processing supports many libraries including video, network, PDF export etc. Jus
     </item>
     
     <item>
+      <title>Display list of installed apps on Android Device</title>
+      <link>https://karanbalkar.com/posts/display-list-of-installed-applications-on-android-device/</link>
+      <pubDate>Sun, 05 Nov 2017 09:18:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/display-list-of-installed-applications-on-android-device/</guid>
+      <description>Hey everyone!
+Android provides the PackageInfo class that contains information about the contents of a package. Sometimes, we need to obtain the list of applications installed on an Android device in order to determine whether our application was installed correctly or not. In this post, I will demonstrate how to obtain the list of all installed applications on your Android device. Since I would be obtaining information about an application, I would also be using the ApplicationInfo class.</description>
+    </item>
+    
+    <item>
       <title>Implement Spell Checker Android</title>
       <link>https://karanbalkar.com/posts/implement-spell-checker-android/</link>
       <pubDate>Wed, 18 Oct 2017 13:38:30 +0530</pubDate>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>installed apps on Threads Of Life</title>
+    <link>https://karanbalkar.com/tags/installed-apps/</link>
+    <description>Recent content in installed apps on Threads Of Life</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Nov 2017 09:18:21 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/installed-apps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Display list of installed apps on Android Device</title>
+      <link>https://karanbalkar.com/posts/display-list-of-installed-applications-on-android-device/</link>
+      <pubDate>Sun, 05 Nov 2017 09:18:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/posts/display-list-of-installed-applications-on-android-device/</guid>
+      <description>Hey everyone!
+Android provides the PackageInfo class that contains information about the contents of a package. Sometimes, we need to obtain the list of applications installed on an Android device in order to determine whether our application was installed correctly or not. In this post, I will demonstrate how to obtain the list of all installed applications on your Android device. Since I would be obtaining information about an application, I would also be using the ApplicationInfo class.</description>
+    </item>
+    
+  </channel>
+</rss>

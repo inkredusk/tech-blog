@@ -6,22 +6,31 @@
     <description>Recent content in Categories on Threads Of Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Oct 2021 21:15:32 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Nov 2021 10:33:33 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Speech recognition</title>
-      <link>https://karanbalkar.com/categories/speech-recognition/</link>
-      <pubDate>Fri, 22 Oct 2021 21:15:32 +0530</pubDate>
+      <title>Svelte</title>
+      <link>https://karanbalkar.com/categories/svelte/</link>
+      <pubDate>Tue, 16 Nov 2021 10:33:33 +0530</pubDate>
       
-      <guid>https://karanbalkar.com/categories/speech-recognition/</guid>
+      <guid>https://karanbalkar.com/categories/svelte/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tech</title>
       <link>https://karanbalkar.com/categories/tech/</link>
-      <pubDate>Fri, 22 Oct 2021 21:15:32 +0530</pubDate>
+      <pubDate>Tue, 16 Nov 2021 10:33:33 +0530</pubDate>
       
       <guid>https://karanbalkar.com/categories/tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Speech recognition</title>
+      <link>https://karanbalkar.com/categories/speech-recognition/</link>
+      <pubDate>Fri, 22 Oct 2021 21:15:32 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/categories/speech-recognition/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Threads Of Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Oct 2021 21:15:32 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Nov 2021 10:33:33 +0530</lastBuildDate><atom:link href="https://karanbalkar.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>development</title>
+      <link>https://karanbalkar.com/tags/development/</link>
+      <pubDate>Tue, 16 Nov 2021 10:33:33 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>svelte</title>
+      <link>https://karanbalkar.com/tags/svelte/</link>
+      <pubDate>Tue, 16 Nov 2021 10:33:33 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/svelte/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web applications</title>
+      <link>https://karanbalkar.com/tags/web-applications/</link>
+      <pubDate>Tue, 16 Nov 2021 10:33:33 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/web-applications/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>javascript</title>
       <link>https://karanbalkar.com/tags/javascript/</link>
@@ -103,15 +130,6 @@
       <pubDate>Tue, 19 Oct 2021 07:53:34 +0530</pubDate>
       
       <guid>https://karanbalkar.com/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>development</title>
-      <link>https://karanbalkar.com/tags/development/</link>
-      <pubDate>Tue, 19 Oct 2021 07:53:34 +0530</pubDate>
-      
-      <guid>https://karanbalkar.com/tags/development/</guid>
       <description></description>
     </item>
     
@@ -265,6 +283,15 @@
       <pubDate>Sat, 18 Aug 2018 20:56:34 +0530</pubDate>
       
       <guid>https://karanbalkar.com/tags/processing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>installed apps</title>
+      <link>https://karanbalkar.com/tags/installed-apps/</link>
+      <pubDate>Sun, 05 Nov 2017 09:18:21 +0530</pubDate>
+      
+      <guid>https://karanbalkar.com/tags/installed-apps/</guid>
       <description></description>
     </item>
     

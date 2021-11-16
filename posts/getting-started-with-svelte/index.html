@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Getting started with Svelte - Threads Of Life</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Getting started with Svelte" />
+<meta property="og:description" content="Hey everyone!
+I recently started using Svelte and it&#39;s quite amazing. The good part about Svelte is that it is a compiler and has no additional framework dependencies. The only dependencies are the devDependencies, that&#39;s it. Hence, the result is a light-weight performant app with a significantly smaller bundle size (thanks to those rollup plugins). Moreover, Svelte ensures that everything happens during the compile or the build time rather than on the browser at runtime." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://karanbalkar.com/posts/getting-started-with-svelte/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-16T10:33:33+05:30" />
+<meta property="article:modified_time" content="2021-11-16T10:33:33+05:30" />
+
+
+		<meta itemprop="name" content="Getting started with Svelte">
+<meta itemprop="description" content="Hey everyone!
+I recently started using Svelte and it&#39;s quite amazing. The good part about Svelte is that it is a compiler and has no additional framework dependencies. The only dependencies are the devDependencies, that&#39;s it. Hence, the result is a light-weight performant app with a significantly smaller bundle size (thanks to those rollup plugins). Moreover, Svelte ensures that everything happens during the compile or the build time rather than on the browser at runtime."><meta itemprop="datePublished" content="2021-11-16T10:33:33+05:30" />
+<meta itemprop="dateModified" content="2021-11-16T10:33:33+05:30" />
+<meta itemprop="wordCount" content="423">
+<meta itemprop="keywords" content="development,web applications,svelte," />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Threads Of Life" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Threads Of Life</div>
+					<div class="logo__tagline">Start..Pause...Run...but never STOP!</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/">
+				
+				<span class="menu__text">Contact</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/speaker-profile/">
+				
+				<span class="menu__text">Speaker Profile</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Getting started with Svelte</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Karan Balkar</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-11-16T10:33:33&#43;05:30">Tuesday, Nov 16, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tech/" rel="category">Tech</a>, <a class="meta__link" href="/categories/svelte/" rel="category">Svelte</a>
+	</span>
+</div></div>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<p>Hey everyone!</p>
+<p align="justify">I recently started using <a href="https://svelte.dev/" target="_blank">Svelte</a> and it's quite amazing. The good part about Svelte is that it is a compiler and has no additional framework dependencies. The only dependencies are the <i>devDependencies</i>, that's it. Hence, the result is a light-weight performant app with a significantly smaller bundle size (thanks to those <a href="https://github.com/rollup/plugins">rollup plugins</a>). Moreover, Svelte ensures that everything happens during the compile or the build time rather than on the browser at runtime. </p>
+<p>Here&rsquo;s how the <strong>package.json</strong> file of a brand new Svelte app looks like,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;svelte-app&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;private&#34;</span>: <span style="color:#66d9ef">true</span>,
+  <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;rollup -c&#34;</span>,
+    <span style="color:#f92672">&#34;dev&#34;</span>: <span style="color:#e6db74">&#34;rollup -c -w&#34;</span>,
+    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;sirv public --no-clear&#34;</span>
+  },
+  <span style="color:#f92672">&#34;devDependencies&#34;</span>: {
+    <span style="color:#f92672">&#34;@rollup/plugin-commonjs&#34;</span>: <span style="color:#e6db74">&#34;^17.0.0&#34;</span>,
+    <span style="color:#f92672">&#34;@rollup/plugin-node-resolve&#34;</span>: <span style="color:#e6db74">&#34;^11.0.0&#34;</span>,
+    <span style="color:#f92672">&#34;rollup&#34;</span>: <span style="color:#e6db74">&#34;^2.3.4&#34;</span>,
+    <span style="color:#f92672">&#34;rollup-plugin-css-only&#34;</span>: <span style="color:#e6db74">&#34;^3.1.0&#34;</span>,
+    <span style="color:#f92672">&#34;rollup-plugin-livereload&#34;</span>: <span style="color:#e6db74">&#34;^2.0.0&#34;</span>,
+    <span style="color:#f92672">&#34;rollup-plugin-svelte&#34;</span>: <span style="color:#e6db74">&#34;^7.0.0&#34;</span>,
+    <span style="color:#f92672">&#34;rollup-plugin-terser&#34;</span>: <span style="color:#e6db74">&#34;^7.0.0&#34;</span>,
+    <span style="color:#f92672">&#34;svelte&#34;</span>: <span style="color:#e6db74">&#34;^3.0.0&#34;</span>
+  },
+  <span style="color:#f92672">&#34;dependencies&#34;</span>: {
+    <span style="color:#f92672">&#34;sirv-cli&#34;</span>: <span style="color:#e6db74">&#34;^1.0.0&#34;</span>
+  }
+}
+</code></pre></div><p align="justify">Creating Svelte apps involves writing less code which is what most developers prefer these days. Svelte doesn't use a <b>virtual DOM</b> unlike other frameworks like React or Vue. If you are not a huge fan of JSX then perhaps Svelte is the ideal framework as it provides a proper demarcation of the HTML, JavaScript and CSS code. Let's understand this with the following example.
+</p>
+<h4 id="create-a-new-svelte-app">Create a new Svelte app</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npx degit sveltejs/template hello-world
+</code></pre></div><p>Now, open the <strong>App.svelte</strong> file and let&rsquo;s write less code 😄</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svelte" data-lang="svelte">&lt;<span style="color:#f92672">script</span>&gt;
+	<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">increment</span> <span style="color:#f92672">=</span> () =&gt; {
+    	<span style="color:#a6e22e">count</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+  	}
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p align="justify">Here, using a HTML-like syntax we simply tell our component we want a <b>count</b> prop by exporting a mutable variable called <b>count</b> and then Svelte handles the rest. All the developer needs to do is to bind it to the appropriate HTML tag. </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svelte" data-lang="svelte">&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">on:click</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">increment</span>}<span style="color:#960050;background-color:#1e0010">&gt;</span>
+    Clicks: {<span style="color:#a6e22e">count</span>}
+&lt;/<span style="color:#f92672">button</span>&gt;
+</code></pre></div><p>and the result would end up looking something like this:</p>
+<p><img src="/custom/images/getting-started-with-svelte-001.png" alt="getting-started-with-svelte-001-output" title="On page load"> <img src="/custom/images/getting-started-with-svelte-002.png" alt="getting-started-with-svelte-002-output" title="After clicking"></p>
+<p>In addition, one can also specify CSS styles as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-svelte" data-lang="svelte">&lt;<span style="color:#f92672">style</span>&gt;
+ <span style="color:#f92672">button</span> {
+    <span style="color:#66d9ef">font-family</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ff3e00</span>;
+    <span style="color:#66d9ef">background-color</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.1</span>);
+    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
+    <span style="color:#66d9ef">outline</span>: <span style="color:#66d9ef">none</span>;
+    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">font-variant-numeric</span>: tabular-nums;
+    <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">pointer</span>;
+  }
+
+  <span style="color:#f92672">button</span>:<span style="color:#a6e22e">focus</span> {
+    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#ff3e00</span>;
+  }
+
+  <span style="color:#f92672">button</span>:<span style="color:#a6e22e">active</span> {
+    <span style="color:#66d9ef">background-color</span>: rgba(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">62</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.2</span>);
+  }
+&lt;/<span style="color:#f92672">style</span>&gt;
+</code></pre></div><p>This was a very basic example of a Svelte app. However, one can do complex stuff as well. Please do read the official <a href="https://svelte.dev/docs">docs</a> for the latest API documentation. Svelte is definitely here to stay and it would be great to use it while developing Production-level apps.</p>
+<p>Stay tuned for more!</p>
+<p>If you have happened to use Svelte recently too, please feel free to post your comments below 😄</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/development/" rel="tag">development</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/web-applications/" rel="tag">web applications</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/svelte/" rel="tag">svelte</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Karan Balkar avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Karan Balkar</span>
+	</div>
+	<div class="authorbox__description">
+		Karan Balkar is a mobile application developer primarily working on Android since the past 5 years. He has also worked on Augmented reality / Virtual reality based mobile applications and is passionate about exploring new innovative technologies.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/my-experiments-with-annyang/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">My Experiments With Annyang!</p>
+		</a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "threadsoflifeblog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 Threads Of Life
+			<span class="footer__copyright-credits"></span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
